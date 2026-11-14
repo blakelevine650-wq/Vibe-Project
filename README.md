@@ -17,7 +17,7 @@ SI 110 FLEX Project.
 | 3 | Quick Three + Tip of the Day | Done |
 | 4 | Stats, streaks, share, practice | Done |
 | 5 | Content + verification | Content drafted; **my verification in progress** |
-| 6 | Polish + deploy | Not started |
+| 6 | Polish + deploy | Done — goes live when the pull request is merged and Pages is switched on |
 | 7 | Reflection | Not started |
 
 All three rounds are playable, your games are saved in the browser (stats, streaks, resume after a refresh), and there is a practice mode and a how-to library. The content in `public/data/` — 30 answer places, 57 guess-only places, 30 trivia questions, 15 tips — was drafted by the AI and is **not yet verified by a person**. Coordinates come from OpenStreetMap; clues, trivia and tips were written from the AI's memory. The checklist is `appendix/content-verification.md`.
@@ -44,6 +44,14 @@ npm test         # unit tests for the daily engine
 npm run build    # type-check + production build into dist/
 ```
 
+## Deploying
+
+`.github/workflows/deploy.yml` runs the tests and build on every pull request, and on every push to `main` it also publishes `dist/` to GitHub Pages.
+
+One-time setup, in the repository on GitHub: **Settings → Pages → Build and deployment → Source: GitHub Actions**. After that, merging to `main` deploys to `https://<your-username>.github.io/Vibe-Project/`.
+
+Before launch, set `EPOCH_DATE_KEY` in `src/lib/date.ts` to the launch date: that day becomes puzzle No. 1.
+
 ## Tech
 
 - Vite + React + **TypeScript** (chosen over plain JS so the content JSON shapes and round results are type-checked)
@@ -51,7 +59,7 @@ npm run build    # type-check + production build into dist/
 - Vitest for the date/seed/selection logic
 - Fonts are self-hosted through Fontsource (Fraunces, Schibsted Grotesk, DM Mono — all open-source), so nothing loads from a third-party CDN
 - Place coordinates are from OpenStreetMap (© OpenStreetMap contributors, ODbL)
-- Deploy target: GitHub Pages via GitHub Actions (Phase 6)
+- Deployed to GitHub Pages by GitHub Actions
 
 ## Repo layout
 

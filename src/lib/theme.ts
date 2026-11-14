@@ -18,6 +18,8 @@ export function useTheme(): [Theme, () => void] {
 
   useEffect(() => {
     document.documentElement.dataset.theme = theme
+    // Keeps the phone's browser bar the same color as the page.
+    document.querySelector('meta[name="theme-color"]')?.setAttribute('content', theme === 'dark' ? '#0c1a2e' : '#f4efe2')
   }, [theme])
 
   const toggle = () =>

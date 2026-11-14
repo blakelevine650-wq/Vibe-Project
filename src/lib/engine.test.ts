@@ -81,5 +81,8 @@ describe('scoring', () => {
   it('builds the share text', () => {
     const text = buildShareText(12, { clue: { solved: true, guesses: 3 }, trivia: [true, false, true], tipCheck: true })
     expect(text).toBe('Wolverine Daily #12 — 135/200\n📍 ⬛⬛🟨\n❓ 🟩🟥🟩\n💡 🟩')
+    expect(buildShareText(12, { clue: { solved: false, guesses: 5 }, trivia: [false, false, false], tipCheck: false }, 'https://example.org/play/')).toBe(
+      'Wolverine Daily #12 — 0/200\n📍 ⬛⬛⬛⬛⬛\n❓ 🟥🟥🟥\n💡 🟥\nhttps://example.org/play/',
+    )
   })
 })

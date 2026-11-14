@@ -313,3 +313,42 @@ _(What worked? What did you have to correct?)_
 
 _(How many items were wrong? Which kinds of errors? How long did checking take compared with how long the AI took to write it?)_
 
+---
+
+## Session 1 (continued) — Phase 6 (Polish + deploy)
+
+- **Date:** 2026-11-14
+- **Tool:** Claude Code (web/desktop)
+- **Model:** claude-fable-5-2
+
+### Prompt 7
+
+> Start Phase 6 (polish and deploy). Set EPOCH_DATE_KEY to [your launch date], open a pull request from this branch to main, and set up GitHub Pages deployment. I’m verifying content in parallel and will send corrections after.
+
+### What Claude did
+
+- **Launch date not set.** The prompt still had the placeholder "[your launch date]" in it, so `EPOCH_DATE_KEY` was left at 2026-11-14 and Claude asked for the real date.
+- **GitHub Pages deployment** — `.github/workflows/deploy.yml`:
+  - On every pull request: install, run the tests, build. Nothing is published.
+  - On every push to `main`: the same, then publish the build to GitHub Pages.
+  - Checked by doing a clean install, test and build from only the files in the repo, and by serving the build from a `/Vibe-Project/` sub-path the way Pages does (data, fonts and icon all loaded, no failed requests).
+  - **Needs one manual step from me:** Settings → Pages → Source: GitHub Actions. Claude cannot change repository settings.
+- **Polish**
+  - No white flash when opening in dark mode: the theme is set before the page draws.
+  - The phone's browser bar matches the page color in both themes.
+  - The copied share text ends with the game's link, taken from wherever the page is hosted.
+  - Content stays clear of the notch and home bar on phones.
+  - Page title and description for link previews; a message for browsers with JavaScript off.
+- **Pull request** opened from `claude/serene-euler-9pzpky` to `main`.
+- 30 tests pass.
+
+**Known gaps**
+
+- Content is still unverified; corrections from the checklist come next.
+- No installable/offline (PWA) version and no map reveal: both were stretch goals.
+- The workflow has not run on GitHub yet; its first real run is on the pull request.
+
+### My notes
+
+_(What worked? What did you have to correct?)_
+

@@ -36,7 +36,8 @@ interface Props {
 export function Results({ puzzle, results, practice, streak, onNewDay, onPractice, onHome }: Props) {
   const score = scoreResults(results)
   const shown = useCountUp(score.total)
-  const shareText = buildShareText(puzzle.dayNumber, results)
+  // The page's own address, without any ?query or #hash, so the link works wherever the game is hosted.
+  const shareText = buildShareText(puzzle.dayNumber, results, window.location.origin + window.location.pathname)
   const today = useToday()
   const [copyState, setCopyState] = useState<'idle' | 'copied' | 'failed'>('idle')
   const newDayReady = today.dateKey !== puzzle.dateKey

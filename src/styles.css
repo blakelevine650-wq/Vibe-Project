@@ -88,7 +88,9 @@ button {
   max-width: 31rem;
   min-height: 100dvh;
   margin: 0 auto;
-  padding: 0 var(--gutter);
+  /* Keeps content clear of the notch and home bar on phones. */
+  padding: env(safe-area-inset-top) max(var(--gutter), env(safe-area-inset-right)) env(safe-area-inset-bottom)
+    max(var(--gutter), env(safe-area-inset-left));
   display: flex;
   flex-direction: column;
   background-color: var(--paper);
@@ -1165,6 +1167,7 @@ button {
 
 .share-grid {
   margin: 0;
+  overflow-wrap: anywhere;
   font-family: var(--sans);
   font-size: 1.0625rem;
   line-height: 1.6;

@@ -27,7 +27,8 @@ export function clueSquares(clue: RoundResults['clue']): string {
   return '⬛'.repeat(misses) + (clue.solved ? '🟨' : '')
 }
 
-export function buildShareText(dayNumber: number, results: RoundResults): string {
+/** `url`, when given, is added as a last line so friends can find the game. */
+export function buildShareText(dayNumber: number, results: RoundResults, url?: string): string {
   const { total } = scoreResults(results)
   const mark = (ok: boolean) => (ok ? '🟩' : '🟥')
   return [
@@ -35,5 +36,6 @@ export function buildShareText(dayNumber: number, results: RoundResults): string
     `📍 ${clueSquares(results.clue)}`,
     `❓ ${results.trivia.map(mark).join('')}`,
     `💡 ${mark(results.tipCheck)}`,
+    ...(url ? [url] : []),
   ].join('\n')
 }
