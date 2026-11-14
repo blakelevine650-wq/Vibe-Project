@@ -192,3 +192,65 @@ _(What worked? What did you have to correct?)_
 
 _(What worked? What did you have to correct?)_
 
+---
+
+## Session 1 (continued) — Phase 4 (Stats, streaks, practice, how-to library)
+
+- **Date:** 2026-11-14
+- **Tool:** Claude Code (web/desktop)
+- **Model:** claude-fable-5-2
+
+### Prompt 5
+
+> Start Phase 4 (stats, streaks, practice mode, how-to library), designed to match the newspaper style. Bring back the streak on the results screen. Commit and push when done.
+
+### What Claude did
+
+**Saving (localStorage)** — `src/lib/storage.ts`
+
+- Each finished daily game is saved by date. Corrupt or wrongly shaped saved data is ignored instead of crashing the app.
+- The daily game is also saved as you play: Campus Clue guesses, Quick Three answers and the tip-check answer are stored the moment you make them. Refreshing brings you back with "Continue today's puzzle" and the same guesses and answers, so a refresh can't be used to retry.
+- Once today is finished the front page changes to "That's today's paper read" with "See today's results"; the daily puzzle can't be replayed.
+- If the browser refuses to save (private mode), a note says so.
+
+**Stats page ("Standings")** — `src/lib/stats.ts`, `src/components/StatsPage.tsx`
+
+- Played, Win %, Current streak, Best streak as large figures; a bar chart of how many guesses Campus Clue took (today's bar in maize); average and best score.
+- A streak counts days in a row with a finished game. It stays alive through today until midnight even if you haven't played yet.
+
+**Streak on the results screen** — back, as a two-box strip: streak on the left, "Next edition in" countdown on the right.
+
+**Practice mode**
+
+- "Practice with a back issue" on the front page, the stats page and the results page. It plays a random other day's puzzle, marked with a "Practice · back issue · no streak" bar and a Quit link.
+- Practice results show the score only (no share grid) and are never saved, so they can't change stats or streak.
+- It skips back issues whose mystery place is the same as today's, so practice can't spoil today's puzzle.
+
+**How-to library**
+
+- Every tip that has already run as Tip of the Day, grouped under Canvas and Wolverine Access, each opening to its steps, with a search box over titles and steps.
+- Today's tip is added only after you finish today's puzzle, so the library can't be used to look up the check answer.
+
+**Navigation** — a Today / Stats / How-tos bar in the same style as the section tabs. It is replaced by the A/B/C tabs while a round is being played.
+
+**Testing**
+
+- 6 new unit tests (30 total): stats, streaks across month ends and the daylight-saving change, and saved-data validation.
+- Browser run on a phone-sized screen: resume after refresh in Campus Clue, in Quick Three, and after the tip check; a streak continuing from earlier days (seeded test data showed 3); stats and chart values; library before and after playing, search and no-match; a full practice game leaving saved data unchanged; Quit from practice. No console errors, no sideways scrolling.
+
+**Decisions made without asking**
+
+- "Win" = finding the Campus Clue place (stated on the stats page).
+- Practice draws from the 365 day-numbers before today. Until the game has been live for a while most of those are dates before launch, i.e. puzzles nobody played rather than true "past" puzzles.
+- No button to reset stats.
+
+**Known gaps**
+
+- With only 4 answers, 6 trivia questions and 2 tips, practice games repeat the daily content heavily (Phase 5).
+- Stats live in one browser on one device; clearing browser data erases them (no accounts, by design).
+- Changing `EPOCH_DATE_KEY` or the content files later will change which puzzle a saved date maps to; saved scores and streaks are unaffected.
+
+### My notes
+
+_(What worked? What did you have to correct?)_
+

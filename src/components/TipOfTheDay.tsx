@@ -22,10 +22,12 @@ interface Props {
   tip: Tip
   /** Seeds the choice order. */
   dateKey: string
-  onDone: (correct: boolean) => void
+  /** Called as soon as the check is answered, so the result is saved before the player moves on. */
+  onAnswered: (correct: boolean) => void
+  onDone: () => void
 }
 
-export function TipOfTheDay({ tip, dateKey, onDone }: Props) {
+export function TipOfTheDay({ tip, dateKey, onAnswered, onDone }: Props) {
   // Read the card first; the steps are hidden while you answer, then shown again.
   const [stage, setStage] = useState<'read' | 'check'>('read')
   const [result, setResult] = useState<boolean | null>(null)
@@ -71,7 +73,10 @@ export function TipOfTheDay({ tip, dateKey, onDone }: Props) {
             choices={tip.check.choices}
             answerIndex={tip.check.answerIndex}
             seed={`${tip.id}:${dateKey}`}
-            onAnswered={setResult}
+            onAnswered={(correct) => {
+              setResult(correct)
+              onAnswered(correct)
+            }}
           />
           {result !== null && (
             <>
@@ -79,7 +84,7 @@ export function TipOfTheDay({ tip, dateKey, onDone }: Props) {
                 <summary>Review the steps</summary>
                 <Steps steps={tip.steps} />
               </details>
-              <button ref={finishRef} className="btn-ink" onClick={() => onDone(result)}>
+              <button ref={finishRef} className="btn-ink" onClick={onDone}>
                 <span>See your results</span>
                 <span aria-hidden="true">→</span>
               </button>

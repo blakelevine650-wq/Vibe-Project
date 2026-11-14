@@ -8,12 +8,17 @@ interface Props {
   questions: TriviaQuestion[]
   /** Seeds the choice order. */
   dateKey: string
+  /** Answers already given, when resuming a saved game. */
+  initialAnswers: boolean[]
+  /** Called with every answer so far each time one is added. */
+  onAnswer: (answers: boolean[]) => void
   onDone: (results: boolean[]) => void
 }
 
-export function QuickThree({ questions, dateKey, onDone }: Props) {
-  const [answers, setAnswers] = useState<boolean[]>([])
-  const [index, setIndex] = useState(0)
+export function QuickThree({ questions, dateKey, initialAnswers, onAnswer, onDone }: Props) {
+  const [answers, setAnswers] = useState<boolean[]>(initialAnswers)
+  // Resuming picks up at the first unanswered question.
+  const [index, setIndex] = useState(Math.min(initialAnswers.length, questions.length - 1))
   const nextRef = useRef<HTMLButtonElement>(null)
   const question = questions[index]!
   const answered = answers.length > index
@@ -40,7 +45,11 @@ export function QuickThree({ questions, dateKey, onDone }: Props) {
         answerIndex={question.answerIndex}
         explanation={question.explanation}
         seed={`${question.id}:${dateKey}`}
-        onAnswered={(correct) => setAnswers((a) => [...a, correct])}
+        onAnswered={(correct) => {
+          const next = [...answers, correct]
+          setAnswers(next)
+          onAnswer(next)
+        }}
       />
 
       {answered && (

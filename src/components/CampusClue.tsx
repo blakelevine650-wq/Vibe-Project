@@ -10,11 +10,17 @@ interface Props {
   target: Place
   /** Every place a player is allowed to guess. */
   places: GuessablePlace[]
+  /** Guesses already made, when resuming a saved game. */
+  initialGuessIds: string[]
+  /** Called with every guess so far each time one is added. */
+  onGuess: (guessIds: string[]) => void
   onDone: (result: RoundResults['clue']) => void
 }
 
-export function CampusClue({ target, places, onDone }: Props) {
-  const [guesses, setGuesses] = useState<GuessablePlace[]>([])
+export function CampusClue({ target, places, initialGuessIds, onGuess, onDone }: Props) {
+  const [guesses, setGuesses] = useState<GuessablePlace[]>(() =>
+    initialGuessIds.flatMap((id) => places.find((p) => p.id === id) ?? []),
+  )
   const [query, setQuery] = useState('')
   const [hint, setHint] = useState('')
   const inputRef = useRef<HTMLInputElement>(null)
@@ -35,7 +41,9 @@ export function CampusClue({ target, places, onDone }: Props) {
   }, [finished])
 
   const submit = (place: GuessablePlace) => {
-    setGuesses((g) => [...g, place])
+    const next = [...guesses, place]
+    setGuesses(next)
+    onGuess(next.map((g) => g.id))
     setQuery('')
     setHint('')
     inputRef.current?.focus()

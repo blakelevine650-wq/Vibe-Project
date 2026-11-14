@@ -22,7 +22,18 @@ function verdictFor(total: number): string {
   return 'Tomorrow is another edition.'
 }
 
-export function Results({ puzzle, results, onNewDay }: { puzzle: DailyPuzzle; results: RoundResults; onNewDay: () => void }) {
+interface Props {
+  puzzle: DailyPuzzle
+  results: RoundResults
+  /** Practice games show the score only: no share grid, streak or countdown. */
+  practice: boolean
+  streak: number
+  onNewDay: () => void
+  onPractice: () => void
+  onHome: () => void
+}
+
+export function Results({ puzzle, results, practice, streak, onNewDay, onPractice, onHome }: Props) {
   const score = scoreResults(results)
   const shown = useCountUp(score.total)
   const shareText = buildShareText(puzzle.dayNumber, results)
@@ -42,7 +53,7 @@ export function Results({ puzzle, results, onNewDay }: { puzzle: DailyPuzzle; re
 
   return (
     <section className="page">
-      <p className="kicker">Final · No. {puzzle.dayNumber}</p>
+      <p className="kicker">{practice ? 'Practice · back issue' : `Final · No. ${puzzle.dayNumber}`}</p>
       <h2 className="headline">{verdictFor(score.total)}</h2>
 
       <div className="score" aria-label={`${score.total} out of ${MAX_SCORE} points`}>
@@ -75,40 +86,71 @@ export function Results({ puzzle, results, onNewDay }: { puzzle: DailyPuzzle; re
         </tfoot>
       </table>
 
-      <div className="clipping share">
-        <p className="clipping-label">
-          <span>Share your score</span>
-          <span>No spoilers</span>
-        </p>
-        <pre className="share-grid" aria-label="Share grid">
-          {shareText}
-        </pre>
-      </div>
-      <button
-        className="btn-ink"
-        onClick={async () => {
-          setCopyState((await copyText(shareText)) ? 'copied' : 'failed')
-          setTimeout(() => setCopyState('idle'), 2500)
-        }}
-      >
-        <span>{copyState === 'copied' ? 'Copied!' : 'Copy results'}</span>
-        <span aria-hidden="true">{copyState === 'copied' ? '✓' : '⧉'}</span>
-      </button>
-      <p className="hint copy-hint" aria-live="polite">
-        {copyState === 'failed' && "Couldn't copy automatically — select the text above and copy it."}
-      </p>
-
-      {newDayReady ? (
-        <button className="btn-line" onClick={onNewDay}>
-          A new puzzle is ready — play it
-        </button>
+      {practice ? (
+        <>
+          <p className="fineprint left">Practice games don't count toward your streak or stats.</p>
+          <button className="btn-ink" onClick={onPractice}>
+            <span>Another back issue</span>
+            <span aria-hidden="true">↺</span>
+          </button>
+          <button className="btn-line" onClick={onHome}>
+            <span>Back to today's edition</span>
+            <span aria-hidden="true">→</span>
+          </button>
+        </>
       ) : (
-        <p className="next-edition">
-          <span>Next edition in</span>
-          <span className="countdown" role="timer">
-            {formatCountdown(today.msLeft)}
-          </span>
-        </p>
+        <>
+          <dl className="figures pair">
+            <div>
+              <dt>Streak</dt>
+              <dd>
+                {streak}
+                <small>{streak === 1 ? 'day' : 'days'}</small>
+              </dd>
+            </div>
+            <div>
+              <dt>{newDayReady ? 'Next edition' : 'Next edition in'}</dt>
+              <dd className="countdown" role="timer">
+                {newDayReady ? 'Out now' : formatCountdown(today.msLeft)}
+              </dd>
+            </div>
+          </dl>
+
+          <div className="clipping share">
+            <p className="clipping-label">
+              <span>Share your score</span>
+              <span>No spoilers</span>
+            </p>
+            <pre className="share-grid" aria-label="Share grid">
+              {shareText}
+            </pre>
+          </div>
+          <button
+            className="btn-ink"
+            onClick={async () => {
+              setCopyState((await copyText(shareText)) ? 'copied' : 'failed')
+              setTimeout(() => setCopyState('idle'), 2500)
+            }}
+          >
+            <span>{copyState === 'copied' ? 'Copied!' : 'Copy results'}</span>
+            <span aria-hidden="true">{copyState === 'copied' ? '✓' : '⧉'}</span>
+          </button>
+          <p className="hint copy-hint" aria-live="polite">
+            {copyState === 'failed' && "Couldn't copy automatically — select the text above and copy it."}
+          </p>
+
+          {newDayReady ? (
+            <button className="btn-line" onClick={onNewDay}>
+              <span>A new puzzle is ready — play it</span>
+              <span aria-hidden="true">→</span>
+            </button>
+          ) : (
+            <button className="btn-line" onClick={onPractice}>
+              <span>Practice with a back issue</span>
+              <span aria-hidden="true">↺</span>
+            </button>
+          )}
+        </>
       )}
     </section>
   )

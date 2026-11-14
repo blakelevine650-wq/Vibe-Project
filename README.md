@@ -15,12 +15,12 @@ SI 110 FLEX Project.
 | 1 | Scaffold + daily engine | Done |
 | 2 | Campus Clue | Done |
 | 3 | Quick Three + Tip of the Day | Done |
-| 4 | Stats, streaks, share, practice | Not started |
+| 4 | Stats, streaks, share, practice | Done |
 | 5 | Content + verification | Not started |
 | 6 | Polish + deploy | Not started |
 | 7 | Reflection | Not started |
 
-All three rounds are playable. Nothing is saved between visits yet (stats and streaks are Phase 4). The content in `public/data/` is **unverified** (a small sample of answers, trivia and tips, plus 58 guess-only places) (see `appendix/content-verification.md`).
+All three rounds are playable, your games are saved in the browser (stats, streaks, resume after a refresh), and there is a practice mode and a how-to library. The content in `public/data/` is **unverified** (a small sample of answers, trivia and tips, plus 58 guess-only places) (see `appendix/content-verification.md`).
 
 ## The daily loop
 
