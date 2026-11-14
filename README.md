@@ -16,11 +16,11 @@ SI 110 FLEX Project.
 | 2 | Campus Clue | Done |
 | 3 | Quick Three + Tip of the Day | Done |
 | 4 | Stats, streaks, share, practice | Done |
-| 5 | Content + verification | Not started |
+| 5 | Content + verification | Content drafted; **my verification in progress** |
 | 6 | Polish + deploy | Not started |
 | 7 | Reflection | Not started |
 
-All three rounds are playable, your games are saved in the browser (stats, streaks, resume after a refresh), and there is a practice mode and a how-to library. The content in `public/data/` is **unverified** (a small sample of answers, trivia and tips, plus 58 guess-only places) (see `appendix/content-verification.md`).
+All three rounds are playable, your games are saved in the browser (stats, streaks, resume after a refresh), and there is a practice mode and a how-to library. The content in `public/data/` — 30 answer places, 57 guess-only places, 30 trivia questions, 15 tips — was drafted by the AI and is **not yet verified by a person**. Coordinates come from OpenStreetMap; clues, trivia and tips were written from the AI's memory. The checklist is `appendix/content-verification.md`.
 
 ## The daily loop
 
@@ -50,6 +50,7 @@ npm run build    # type-check + production build into dist/
 - Static site, no backend; content in `public/data/*.json`
 - Vitest for the date/seed/selection logic
 - Fonts are self-hosted through Fontsource (Fraunces, Schibsted Grotesk, DM Mono — all open-source), so nothing loads from a third-party CDN
+- Place coordinates are from OpenStreetMap (© OpenStreetMap contributors, ODbL)
 - Deploy target: GitHub Pages via GitHub Actions (Phase 6)
 
 ## Repo layout

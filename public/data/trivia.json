@@ -3,22 +3,134 @@
     "id": "sports-001",
     "category": "sports",
     "question": "What is the nickname of Michigan Stadium?",
-    "choices": ["The Horseshoe", "The Big House", "The Swamp", "Death Valley"],
+    "choices": [
+      "The Horseshoe",
+      "The Big House",
+      "The Swamp",
+      "Death Valley"
+    ],
     "answerIndex": 1
   },
   {
     "id": "sports-002",
     "category": "sports",
     "question": "What is the name of Michigan's fight song?",
-    "choices": ["Varsity", "The Victors", "Hail to the Chiefs", "On, Michigan"],
+    "choices": [
+      "Varsity",
+      "The Victors",
+      "Hail to the Chiefs",
+      "On, Michigan"
+    ],
     "answerIndex": 1,
     "explanation": "\"The Victors\" was written by student Louis Elbel in 1898."
+  },
+  {
+    "id": "sports-003",
+    "category": "sports",
+    "question": "Which coach led Michigan football to a share of the 1997 national championship?",
+    "choices": [
+      "Bo Schembechler",
+      "Lloyd Carr",
+      "Gary Moeller",
+      "Jim Harbaugh"
+    ],
+    "answerIndex": 1
+  },
+  {
+    "id": "sports-004",
+    "category": "sports",
+    "question": "Which coach brought the winged helmet design to Michigan in 1938?",
+    "choices": [
+      "Fielding Yost",
+      "Fritz Crisler",
+      "Bennie Oosterbaan",
+      "Bo Schembechler"
+    ],
+    "answerIndex": 1
+  },
+  {
+    "id": "sports-005",
+    "category": "sports",
+    "question": "Michigan and Minnesota play football for which trophy?",
+    "choices": [
+      "The Little Brown Jug",
+      "Paul Bunyan's Axe",
+      "The Old Oaken Bucket",
+      "Floyd of Rosedale"
+    ],
+    "answerIndex": 0,
+    "explanation": "The Little Brown Jug dates to a 1903 game and is one of the oldest trophies in college football."
+  },
+  {
+    "id": "sports-006",
+    "category": "sports",
+    "question": "Which Michigan player won the Heisman Trophy in 1991?",
+    "choices": [
+      "Charles Woodson",
+      "Desmond Howard",
+      "Tom Harmon",
+      "Anthony Carter"
+    ],
+    "answerIndex": 1
+  },
+  {
+    "id": "sports-007",
+    "category": "sports",
+    "question": "In what year did the \"Fab Five\" arrive as freshmen on the men's basketball team?",
+    "choices": [
+      "1989",
+      "1991",
+      "1993",
+      "1995"
+    ],
+    "answerIndex": 1
+  },
+  {
+    "id": "sports-008",
+    "category": "sports",
+    "question": "In what year did Michigan men's basketball win its NCAA national championship?",
+    "choices": [
+      "1976",
+      "1989",
+      "1993",
+      "2013"
+    ],
+    "answerIndex": 1
+  },
+  {
+    "id": "sports-009",
+    "category": "sports",
+    "question": "Where does the Michigan hockey team play its home games?",
+    "choices": [
+      "Crisler Center",
+      "Yost Ice Arena",
+      "Cliff Keen Arena",
+      "Canham Natatorium"
+    ],
+    "answerIndex": 1
+  },
+  {
+    "id": "sports-010",
+    "category": "sports",
+    "question": "Michigan and Michigan State play football for which trophy?",
+    "choices": [
+      "The Little Brown Jug",
+      "The Paul Bunyan Trophy",
+      "The Megaphone Trophy",
+      "The Land Grant Trophy"
+    ],
+    "answerIndex": 1
   },
   {
     "id": "traditions-001",
     "category": "traditions",
     "question": "In what year was the University of Michigan founded?",
-    "choices": ["1787", "1817", "1837", "1855"],
+    "choices": [
+      "1787",
+      "1817",
+      "1837",
+      "1855"
+    ],
     "answerIndex": 1,
     "explanation": "It was founded in Detroit in 1817 and moved to Ann Arbor in 1837."
   },
@@ -26,21 +138,230 @@
     "id": "traditions-002",
     "category": "traditions",
     "question": "According to campus superstition, what happens if you step on the brass M in the Diag before your first exam?",
-    "choices": ["You lose your football tickets", "You fail your first blue book exam", "You have to sing the fight song", "You get locked out of Canvas"],
+    "choices": [
+      "You lose your football tickets",
+      "You fail your first blue book exam",
+      "You have to sing the fight song",
+      "You get locked out of Canvas"
+    ],
     "answerIndex": 1
+  },
+  {
+    "id": "traditions-003",
+    "category": "traditions",
+    "question": "In which city was the University of Michigan founded?",
+    "choices": [
+      "Ann Arbor",
+      "Detroit",
+      "Lansing",
+      "Ypsilanti"
+    ],
+    "answerIndex": 1
+  },
+  {
+    "id": "traditions-004",
+    "category": "traditions",
+    "question": "In what year did the university move to Ann Arbor?",
+    "choices": [
+      "1817",
+      "1827",
+      "1837",
+      "1857"
+    ],
+    "answerIndex": 2
+  },
+  {
+    "id": "traditions-005",
+    "category": "traditions",
+    "question": "What are the University of Michigan's school colors?",
+    "choices": [
+      "Green and white",
+      "Maize and blue",
+      "Scarlet and gray",
+      "Gold and navy"
+    ],
+    "answerIndex": 1
+  },
+  {
+    "id": "traditions-006",
+    "category": "traditions",
+    "question": "In 1960, which presidential candidate first proposed the idea behind the Peace Corps on the steps of the Michigan Union?",
+    "choices": [
+      "Richard Nixon",
+      "John F. Kennedy",
+      "Lyndon B. Johnson",
+      "Dwight D. Eisenhower"
+    ],
+    "answerIndex": 1
+  },
+  {
+    "id": "traditions-007",
+    "category": "traditions",
+    "question": "What do student groups traditionally do to The Rock at Hill Street and Washtenaw Avenue?",
+    "choices": [
+      "Climb it at midnight",
+      "Paint it",
+      "Leave coins on it",
+      "Decorate it with lights"
+    ],
+    "answerIndex": 1
+  },
+  {
+    "id": "traditions-008",
+    "category": "traditions",
+    "question": "Who was the university's longest-serving president?",
+    "choices": [
+      "Henry Tappan",
+      "James B. Angell",
+      "Harlan Hatcher",
+      "James Duderstadt"
+    ],
+    "answerIndex": 1,
+    "explanation": "Angell served from 1871 to 1909. Angell Hall is named for him."
+  },
+  {
+    "id": "traditions-009",
+    "category": "traditions",
+    "question": "Finish the lyric from \"The Victors\": \"Hail! to the victors valiant ... the champions of the ___.\"",
+    "choices": [
+      "North",
+      "Big Ten",
+      "West",
+      "World"
+    ],
+    "answerIndex": 2
+  },
+  {
+    "id": "traditions-010",
+    "category": "traditions",
+    "question": "What was the university called when it was founded in 1817?",
+    "choices": [
+      "Michigan College",
+      "The Catholepistemiad",
+      "Ann Arbor Academy",
+      "Wolverine University"
+    ],
+    "answerIndex": 1,
+    "explanation": "Its full original name was the Catholepistemiad, or University of Michigania."
   },
   {
     "id": "campus-life-001",
     "category": "campus-life",
     "question": "What is the large open space at the center of Central Campus called?",
-    "choices": ["The Quad", "The Diag", "The Yard", "The Oval"],
+    "choices": [
+      "The Quad",
+      "The Diag",
+      "The Yard",
+      "The Oval"
+    ],
     "answerIndex": 1
   },
   {
     "id": "campus-life-002",
     "category": "campus-life",
     "question": "Which campus is home to most of the College of Engineering?",
-    "choices": ["Central Campus", "North Campus", "South Campus", "Medical Campus"],
+    "choices": [
+      "Central Campus",
+      "North Campus",
+      "South Campus",
+      "Medical Campus"
+    ],
+    "answerIndex": 1
+  },
+  {
+    "id": "campus-life-003",
+    "category": "campus-life",
+    "question": "Which building do students call \"the UGLi\"?",
+    "choices": [
+      "Hatcher Graduate Library",
+      "Shapiro Undergraduate Library",
+      "Duderstadt Center",
+      "Law Library"
+    ],
+    "answerIndex": 1
+  },
+  {
+    "id": "campus-life-004",
+    "category": "campus-life",
+    "question": "Which North Campus building is nicknamed \"the Dude\"?",
+    "choices": [
+      "Pierpont Commons",
+      "Duderstadt Center",
+      "Bursley Hall",
+      "Beyster Building"
+    ],
+    "answerIndex": 1
+  },
+  {
+    "id": "campus-life-005",
+    "category": "campus-life",
+    "question": "\"MoJo\" is short for which residence hall?",
+    "choices": [
+      "Mary Markley",
+      "Mosher-Jordan",
+      "Martha Cook",
+      "Munger"
+    ],
+    "answerIndex": 1
+  },
+  {
+    "id": "campus-life-006",
+    "category": "campus-life",
+    "question": "How much does it cost a student to ride a U-M campus bus?",
+    "choices": [
+      "Nothing — it's free",
+      "$1 per ride",
+      "$1.50 per ride",
+      "A semester pass is required"
+    ],
+    "answerIndex": 0
+  },
+  {
+    "id": "campus-life-007",
+    "category": "campus-life",
+    "question": "What do students call Nichols Arboretum?",
+    "choices": [
+      "The Nic",
+      "The Arb",
+      "The Woods",
+      "The Garden"
+    ],
+    "answerIndex": 1
+  },
+  {
+    "id": "campus-life-008",
+    "category": "campus-life",
+    "question": "What is the U-M student ID card called?",
+    "choices": [
+      "Blue Card",
+      "Mcard",
+      "Wolverine Card",
+      "UMID Pass"
+    ],
+    "answerIndex": 1
+  },
+  {
+    "id": "campus-life-009",
+    "category": "campus-life",
+    "question": "What is the name for your U-M login ID — the part of your email before @umich.edu?",
+    "choices": [
+      "Uniqname",
+      "M-number",
+      "WolverineID",
+      "NetID"
+    ],
+    "answerIndex": 0
+  },
+  {
+    "id": "campus-life-010",
+    "category": "campus-life",
+    "question": "What is \"the Fishbowl\" in Angell Hall?",
+    "choices": [
+      "An aquarium",
+      "A computing site",
+      "A dining hall",
+      "A swimming pool"
+    ],
     "answerIndex": 1
   }
 ]

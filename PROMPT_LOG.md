@@ -254,3 +254,62 @@ _(What worked? What did you have to correct?)_
 
 _(What worked? What did you have to correct?)_
 
+---
+
+## Session 1 (continued) — Phase 5 (Content + verification checklist)
+
+- **Date:** 2026-11-14
+- **Tool:** Claude Code (web/desktop)
+- **Model:** claude-fable-5-2
+
+### Prompt 6
+
+> Start Phase 5. Expand the content to: 30 answer places, 10 trivia questions per category (30 total), and 15 tips (mix of Canvas and Wolverine Access). For all place coordinates, including the 58 guessable places, try to look them up from OpenStreetMap instead of using memory, and tell me which ones you couldn’t verify or that moved more than 100 feet. Then make appendix/content-verification.md a checklist I can work through, with a column for “Correct? / What was wrong.” Commit and push when done
+
+### What Claude did
+
+**Getting to OpenStreetMap**
+
+- The session's network settings blocked OpenStreetMap. Claude asked for, and I approved, a new cloud environment named "Vibe-Project" that allows two OpenStreetMap hosts.
+- Of the two, only the search service (Nominatim) worked through the session's proxy; the bulk-query service (Overpass) kept dropping the connection. Every place was looked up by name through Nominatim, one request at a time, limited to the Ann Arbor area.
+
+**Content now in `public/data/`**
+
+- **30 answer places** (was 4), each with 5 clues. 26 were promoted from the old guess-only list, because the best-known places make the best answers.
+- **57 guess-only places** (was 58): the 32 left over, plus 25 new ones so the guess list still hides the answers. 87 guessable places in total.
+- **30 trivia questions**, 10 per category (was 6).
+- **15 tips**: 8 Canvas, 7 Wolverine Access (was 2).
+
+**What the OpenStreetMap lookup found**
+
+- Of the 62 coordinates Claude had earlier written from memory, **34 (55%) were off by more than 100 ft**; 6 were off by more than 500 ft. Median error 129 ft. Worst: Matthaei Botanical Gardens (2,902 ft) and Burton Memorial Tower (1,910 ft — the memory value put it south of the Diag; it is north).
+- **Could not verify: Law Quad.** OpenStreetMap has nothing named Law Quad or Law Quadrangle, so it uses the coordinates of Hutchins Hall, the Law School building on its corner.
+- 21 other matches are judgment calls (different official name, a big area reduced to one point, or a place that may have moved, such as Elbel Field and The Cube). All are listed in the checklist.
+- All coordinates in the data files are now OpenStreetMap's. An attribution line was added to the app footer and README, as OpenStreetMap's license requires.
+
+**What was NOT looked up**
+
+- Every clue (150), trivia question (30) and tip step was written from Claude's memory. Nothing checked them. Claude said it is least sure of the 7 Wolverine Access tips, since it cannot see those screens.
+
+**The checklist — `appendix/content-verification.md`**
+
+- Rewritten as tables to work down, each row with a ☐ box and a "Correct? / What was wrong" column: 87 coordinates (each with a clickable map link and a flag showing how far it moved), 150 clues, 30 trivia questions (with a Source column), and 15 tips step by step (79 rows, with a screenshot-filename line per tip). 346 rows in total.
+- A tally table at the top to fill in, a list of error-type words to use so errors can be counted, and the memory-vs-OpenStreetMap comparison as ready-made data for the reflection.
+
+**Testing** — the 30 existing tests still pass, including the content-structure checks (unique names, coordinates inside the Ann Arbor area, 5 clues per answer, valid answer indexes, 3–5 steps per tip). Played a full game in the browser on the new content with no errors.
+
+**Decisions made without asking**
+
+- Promoting 26 guess-only places to answers and adding 25 new guess-only places.
+- Dropping Hutchins Hall from the guess list (its coordinates stand in for Law Quad).
+- Area places (the Arb, the Diag, Matthaei, Baits) use the center point OpenStreetMap gives.
+
+**Known gaps**
+
+- Changing the content changed which puzzle each date maps to, so today's puzzle is different from the one earlier today. Saved scores are unaffected.
+- OpenStreetMap can itself be wrong or out of date; its coordinates are a better starting point than memory, not a substitute for my check.
+
+### My notes
+
+_(How many items were wrong? Which kinds of errors? How long did checking take compared with how long the AI took to write it?)_
+

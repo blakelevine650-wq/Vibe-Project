@@ -1396,6 +1396,11 @@ button {
   text-wrap: balance;
 }
 
+.colophon span {
+  display: block;
+  margin-top: 0.35rem;
+}
+
 @media (prefers-reduced-motion: reduce) {
   *,
   *::before,

@@ -335,6 +335,7 @@ export default function App() {
 
       <footer className="colophon">
         Unofficial student project. Not affiliated with or endorsed by the University of Michigan.
+        <span>Place data © OpenStreetMap contributors.</span>
       </footer>
     </div>
   )
