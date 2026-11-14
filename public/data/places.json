@@ -1,0 +1,58 @@
+[
+  {
+    "id": "burton-tower",
+    "name": "Burton Memorial Tower",
+    "lat": 42.2742,
+    "lng": -83.7382,
+    "aliases": ["Burton Tower", "Bell Tower"],
+    "clues": [
+      "You can hear this place before you see it.",
+      "It is one of the tallest things on Central Campus.",
+      "It has a clock face on each side.",
+      "A carillon is played from near the top.",
+      "It stands beside Hill Auditorium and the Ingalls Mall fountain."
+    ]
+  },
+  {
+    "id": "michigan-stadium",
+    "name": "Michigan Stadium",
+    "lat": 42.2658,
+    "lng": -83.7487,
+    "aliases": ["The Big House"],
+    "clues": [
+      "Most of this place sits below street level.",
+      "It is far busier on fall Saturdays than any other day.",
+      "It is on the athletic campus, south of Central Campus.",
+      "More than 100,000 people fit inside.",
+      "Its nickname is \"The Big House.\""
+    ]
+  },
+  {
+    "id": "hatcher-library",
+    "name": "Hatcher Graduate Library",
+    "lat": 42.2763,
+    "lng": -83.7381,
+    "aliases": ["Hatcher", "Grad Library", "Graduate Library"],
+    "clues": [
+      "People come here to be quiet.",
+      "It faces the Diag.",
+      "It has a north and a south building.",
+      "It is connected to the Shapiro Undergraduate Library.",
+      "Students call it \"the Grad.\""
+    ]
+  },
+  {
+    "id": "the-cube",
+    "name": "The Cube",
+    "lat": 42.2752,
+    "lng": -83.7417,
+    "aliases": ["Endover", "Cube"],
+    "clues": [
+      "This is a sculpture, not a building.",
+      "It balances on one corner.",
+      "Give it a push and it spins.",
+      "It sits in Regents' Plaza.",
+      "It is next to the Michigan Union and the Fleming site."
+    ]
+  }
+]

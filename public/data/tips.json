@@ -1,0 +1,34 @@
+[
+  {
+    "id": "canvas-grade-breakdown",
+    "system": "canvas",
+    "title": "How to see your grade breakdown in Canvas",
+    "steps": [
+      "Open Canvas and click the course from your Dashboard.",
+      "In the course menu on the left, click Grades.",
+      "Scroll the list to see your score on each assignment.",
+      "Look at the sidebar for your total and how each assignment group is weighted."
+    ],
+    "check": {
+      "question": "Which link in the course menu do you click first?",
+      "choices": ["Modules", "Grades", "Syllabus", "People"],
+      "answerIndex": 1
+    }
+  },
+  {
+    "id": "wa-class-schedule",
+    "system": "wolverine-access",
+    "title": "How to find your class schedule in Wolverine Access",
+    "steps": [
+      "Go to Wolverine Access and log in with your uniqname.",
+      "Open Student Business.",
+      "Choose the Backpack/Registration tile.",
+      "Pick the term to see your enrolled classes with times and locations."
+    ],
+    "check": {
+      "question": "Which section of Wolverine Access do you open after logging in?",
+      "choices": ["Student Business", "Faculty Business", "University Business", "Parents & Family"],
+      "answerIndex": 0
+    }
+  }
+]
