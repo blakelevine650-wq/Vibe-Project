@@ -2,8 +2,9 @@ import { useEffect, useState } from 'react'
 import { CampusClue } from './components/CampusClue'
 import { Home } from './components/Home'
 import { Results } from './components/Results'
-import { TipPlaceholder, TriviaPlaceholder } from './components/RoundPlaceholders'
-import { loadContent } from './lib/content'
+import { QuickThree } from './components/QuickThree'
+import { TipOfTheDay } from './components/TipOfTheDay'
+import { allGuessable, loadContent } from './lib/content'
 import { getDailyPuzzle } from './lib/daily'
 import { getDateKey } from './lib/date'
 import { useTheme } from './lib/theme'
@@ -53,7 +54,7 @@ export default function App() {
       body = (
         <CampusClue
           target={puzzle.place}
-          places={content.places}
+          places={allGuessable(content)}
           onDone={(clue) => {
             setResults((r) => ({ ...r, clue }))
             setStage('trivia')
@@ -62,8 +63,9 @@ export default function App() {
       )
     } else if (stage === 'trivia') {
       body = (
-        <TriviaPlaceholder
+        <QuickThree
           questions={puzzle.trivia}
+          dateKey={puzzle.dateKey}
           onDone={(trivia) => {
             setResults((r) => ({ ...r, trivia }))
             setStage('tip')
@@ -72,8 +74,9 @@ export default function App() {
       )
     } else if (stage === 'tip') {
       body = (
-        <TipPlaceholder
+        <TipOfTheDay
           tip={puzzle.tip}
+          dateKey={puzzle.dateKey}
           onDone={(tipCheck) => {
             setResults((r) => ({ ...r, tipCheck }))
             setStage('results')

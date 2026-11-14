@@ -30,3 +30,11 @@ export function seededShuffle<T>(items: readonly T[], seed: string): T[] {
   }
   return out
 }
+
+/** Display order for a question's choices: a seeded shuffle of 0..count-1. */
+export function choiceOrder(count: number, seed: string): number[] {
+  return seededShuffle(
+    Array.from({ length: count }, (_, i) => i),
+    seed,
+  )
+}

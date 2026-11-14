@@ -99,3 +99,56 @@ _(What worked? What did you have to correct? Did the model match the plan for th
 
 _(What worked? What did you have to correct?)_
 
+---
+
+## Session 1 (continued) — Guess list split + Phase 3 (Quick Three + Tip of the Day)
+
+- **Date:** 2026-11-14
+- **Tool:** Claude Code (web/desktop)
+- **Model:** claude-fable-5-2
+
+### Prompt 3
+
+> Keep the free first clue and the list-based guessing. Separate the guess list from the answer pool: add a larger list of guessable campus places (40–60) that can be guessed but are never answers, so the list doesn’t give the answer away. Then start Phase 3 (Quick Three + Tip of the Day). Commit and push when done.
+
+### What Claude did
+
+**Guess list separated from the answer pool**
+
+- New `public/data/guessable-places.json`: 58 campus places (name, coordinates, aliases, no clues) that can be guessed but are never picked as the answer. The daily engine still only draws answers from `places.json`.
+- The guess box now searches both files together (62 places). Typing "library" offers three libraries, not just the answer.
+- This made the losing path reachable; it now works and was tested (five wrong guesses → answer revealed, 0 points).
+- All 58 are logged one row each in `appendix/content-verification.md` as unchecked. **They were written from memory with no map lookup.**
+
+**Phase 3 — Quick Three** (`src/components/QuickThree.tsx`)
+
+- One question at a time with a category chip and "Question 1 of 3".
+- Tap a choice and it locks: the right answer gets a green outline and ✓, a wrong pick gets a red outline and ✗, and the explanation shows if the question has one. Then "Next question".
+- The order of the choices is shuffled, seeded by question + date, so everyone sees the same order that day. (In the sample data the right answer was always the second choice.)
+
+**Phase 3 — Tip of the Day** (`src/components/TipOfTheDay.tsx`)
+
+- Step card first (Canvas / Wolverine Access chip, title, numbered steps), then "Got it — quick check".
+- The steps are hidden while you answer the check question, so it actually tests whether you read them. Afterwards a "Review the steps" section is available (opened automatically if you got it wrong).
+
+**Other**
+
+- Removed the placeholder rounds; nothing in the app is a stand-in anymore.
+- Added `src/lib/content.test.ts`: structure checks on the content files (unique ids, no two places sharing a name or alias, coordinates inside the Ann Arbor area, 5 clues per answer, valid answer indexes, 3–5 steps per tip, 40–60 guess-only places). These catch broken data, **not wrong facts**. 24 tests total.
+- Played the whole game in a phone-sized browser: losing Campus Clue, a right and a wrong trivia answer, a locked question not changing when tapped again, the tip check, and the results screen (75/200 with the matching share grid).
+
+**Decisions made without asking**
+
+- Steps are hidden during the tip check.
+- Choice order is shuffled per day.
+- Trimmed my first draft of the guess list from 64 to 58 to stay in the 40–60 range.
+
+**Known gaps**
+
+- Still only 4 possible answers, 2 trivia questions per category and 2 tips, so puzzles repeat within days (Phase 5).
+- Nothing is saved between visits (Phase 4).
+
+### My notes
+
+_(What worked? What did you have to correct?)_
+

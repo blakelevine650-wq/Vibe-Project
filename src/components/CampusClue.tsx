@@ -1,19 +1,19 @@
 import { useEffect, useRef, useState } from 'react'
 import { feedbackFor, searchPlaces } from '../lib/geo'
 import { CLUE_POINTS, MAX_CLUE_GUESSES } from '../lib/scoring'
-import type { Place, RoundResults } from '../types'
+import type { GuessablePlace, Place, RoundResults } from '../types'
 
 const MAX_SUGGESTIONS = 6
 
 interface Props {
   target: Place
   /** Every place a player is allowed to guess. */
-  places: Place[]
+  places: GuessablePlace[]
   onDone: (result: RoundResults['clue']) => void
 }
 
 export function CampusClue({ target, places, onDone }: Props) {
-  const [guesses, setGuesses] = useState<Place[]>([])
+  const [guesses, setGuesses] = useState<GuessablePlace[]>([])
   const [query, setQuery] = useState('')
   const [hint, setHint] = useState('')
   const inputRef = useRef<HTMLInputElement>(null)
@@ -33,7 +33,7 @@ export function CampusClue({ target, places, onDone }: Props) {
     if (finished) continueRef.current?.focus()
   }, [finished])
 
-  const submit = (place: Place) => {
+  const submit = (place: GuessablePlace) => {
     setGuesses((g) => [...g, place])
     setQuery('')
     setHint('')

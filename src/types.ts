@@ -1,10 +1,15 @@
-export interface Place {
+/** Anything a player can type as a Campus Clue guess. */
+export interface GuessablePlace {
   id: string
   name: string
   lat: number
   lng: number
   /** Other names a player might type. */
   aliases?: string[]
+}
+
+/** A place that can be the day's answer. */
+export interface Place extends GuessablePlace {
   /** Shown one at a time, vaguest first. */
   clues: string[]
 }
@@ -29,7 +34,10 @@ export interface Tip {
 }
 
 export interface Content {
+  /** The answer pool. */
   places: Place[]
+  /** Guess-only places: valid guesses that are never the answer. */
+  guessOnly: GuessablePlace[]
   trivia: TriviaQuestion[]
   tips: Tip[]
 }

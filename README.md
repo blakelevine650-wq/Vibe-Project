@@ -14,13 +14,13 @@ SI 110 FLEX Project.
 | 0 | Setup: repo, README, plan, prompt log | Done |
 | 1 | Scaffold + daily engine | Done |
 | 2 | Campus Clue | Done |
-| 3 | Quick Three + Tip of the Day | Not started |
+| 3 | Quick Three + Tip of the Day | Done |
 | 4 | Stats, streaks, share, practice | Not started |
 | 5 | Content + verification | Not started |
 | 6 | Polish + deploy | Not started |
 | 7 | Reflection | Not started |
 
-Campus Clue is playable. Quick Three and Tip of the Day are still **placeholders**: they show today's selected content and let you pick an outcome so the results screen can be exercised. Real gameplay arrives in Phase 3. The content in `public/data/` is a small **unverified** sample set (see `appendix/content-verification.md`).
+All three rounds are playable. Nothing is saved between visits yet (stats and streaks are Phase 4). The content in `public/data/` is **unverified** (a small sample of answers, trivia and tips, plus 58 guess-only places) (see `appendix/content-verification.md`).
 
 ## The daily loop
 
@@ -53,7 +53,7 @@ npm run build    # type-check + production build into dist/
 /src            app code
   /lib          daily engine: date, seeded RNG, selection, scoring, share text
   /components   screens
-/public/data    places.json, trivia.json, tips.json
+/public/data    places.json (answers), guessable-places.json (guess-only), trivia.json, tips.json
 /appendix       transcripts/, screenshots/, content-verification.md
 PROMPT_LOG.md   every prompt + what Claude did + my notes
 PLAN.md         project plan

@@ -1,4 +1,4 @@
-import type { Place } from '../types'
+import type { GuessablePlace as Place } from '../types'
 
 const EARTH_RADIUS_MILES = 3958.8
 const toRad = (deg: number) => (deg * Math.PI) / 180

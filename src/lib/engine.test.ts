@@ -59,6 +59,7 @@ describe('daily selection', () => {
   it('builds a puzzle with one question per category', () => {
     const content: Content = {
       places: [{ id: 'p1', name: 'P', lat: 0, lng: 0, clues: ['c'] }],
+      guessOnly: [],
       trivia: TRIVIA_CATEGORIES.flatMap((category) =>
         [1, 2].map((n) => ({ id: `${category}-${n}`, category, question: 'q', choices: ['a', 'b'], answerIndex: 0 })),
       ),
