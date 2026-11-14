@@ -13,14 +13,14 @@ SI 110 FLEX Project.
 |---|---|---|
 | 0 | Setup: repo, README, plan, prompt log | Done |
 | 1 | Scaffold + daily engine | Done |
-| 2 | Campus Clue | Not started |
+| 2 | Campus Clue | Done |
 | 3 | Quick Three + Tip of the Day | Not started |
 | 4 | Stats, streaks, share, practice | Not started |
 | 5 | Content + verification | Not started |
 | 6 | Polish + deploy | Not started |
 | 7 | Reflection | Not started |
 
-The three rounds are currently **placeholders**: they show today's selected content and let you pick an outcome so the results screen can be exercised. Real gameplay arrives in Phases 2–3. The content in `public/data/` is a small **unverified** sample set (see `appendix/content-verification.md`).
+Campus Clue is playable. Quick Three and Tip of the Day are still **placeholders**: they show today's selected content and let you pick an outcome so the results screen can be exercised. Real gameplay arrives in Phase 3. The content in `public/data/` is a small **unverified** sample set (see `appendix/content-verification.md`).
 
 ## The daily loop
 

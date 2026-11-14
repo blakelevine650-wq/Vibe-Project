@@ -320,3 +320,132 @@ h3 {
   font-size: 0.75rem;
   color: var(--muted);
 }
+
+/* Campus Clue */
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip-path: inset(50%);
+  white-space: nowrap;
+}
+
+.clues {
+  padding-left: 1.4rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+  color: var(--muted);
+}
+
+.clues li.latest {
+  color: var(--text);
+  font-weight: 600;
+}
+
+.guesses {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+
+.guesses li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.6rem 0.75rem;
+  border: 1px solid var(--border);
+  border-left-width: 5px;
+  border-radius: 0.6rem;
+}
+
+.guesses li.miss {
+  border-left-color: var(--muted);
+}
+
+.guesses li.hit {
+  border-left-color: var(--maize);
+  font-weight: 700;
+}
+
+.guess-feedback {
+  flex-shrink: 0;
+  font-weight: 700;
+  font-variant-numeric: tabular-nums;
+}
+
+.arrow {
+  display: inline-block;
+  min-width: 1.2em;
+  font-size: 1.25rem;
+  line-height: 1;
+  text-align: center;
+}
+
+.guess-form {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+
+.guess-form > * {
+  margin: 0;
+}
+
+.guess-input-row {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.text-input {
+  flex: 1;
+  min-width: 0;
+  min-height: 3rem;
+  padding: 0.6rem 0.75rem;
+  border: 1px solid var(--border);
+  border-radius: 0.75rem;
+  background: var(--bg);
+  color: var(--text);
+  /* 16px or larger stops iOS from zooming the page on focus. */
+  font: inherit;
+}
+
+.text-input:focus-visible {
+  outline: 3px solid var(--maize);
+  outline-offset: 2px;
+}
+
+.suggestions {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+}
+
+.suggestion {
+  width: 100%;
+  text-align: left;
+  font-weight: 500;
+}
+
+.outcome {
+  display: flex;
+  flex-direction: column;
+  gap: 0.15rem;
+  padding: 0.75rem;
+  border-radius: 0.75rem;
+  text-align: center;
+  background: var(--note-bg);
+  color: var(--note-text);
+}
+
+.outcome.loss {
+  background: var(--bg);
+  color: var(--text);
+}

@@ -1,7 +1,8 @@
 import { useEffect, useState } from 'react'
+import { CampusClue } from './components/CampusClue'
 import { Home } from './components/Home'
 import { Results } from './components/Results'
-import { CluePlaceholder, TipPlaceholder, TriviaPlaceholder } from './components/RoundPlaceholders'
+import { TipPlaceholder, TriviaPlaceholder } from './components/RoundPlaceholders'
 import { loadContent } from './lib/content'
 import { getDailyPuzzle } from './lib/daily'
 import { getDateKey } from './lib/date'
@@ -50,8 +51,9 @@ export default function App() {
       body = <Home puzzle={puzzle} onStart={() => setStage('clue')} />
     } else if (stage === 'clue') {
       body = (
-        <CluePlaceholder
-          place={puzzle.place}
+        <CampusClue
+          target={puzzle.place}
+          places={content.places}
           onDone={(clue) => {
             setResults((r) => ({ ...r, clue }))
             setStage('trivia')
