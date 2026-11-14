@@ -31,6 +31,10 @@ All three rounds are playable. Nothing is saved between visits yet (stats and st
 
 Everyone gets the same puzzle each day: selection is seeded by the calendar date in `America/Detroit`.
 
+## Design
+
+The app is styled as a student newspaper: a nameplate and dateline, lettered sections (A, B, C), hairline rules, a "clip & save" tip card and a box score on the results page. Two inks — navy and maize — on newsprint, with a dark "night edition". No official logos or marks.
+
 ## Run it
 
 ```bash
@@ -45,6 +49,7 @@ npm run build    # type-check + production build into dist/
 - Vite + React + **TypeScript** (chosen over plain JS so the content JSON shapes and round results are type-checked)
 - Static site, no backend; content in `public/data/*.json`
 - Vitest for the date/seed/selection logic
+- Fonts are self-hosted through Fontsource (Fraunces, Schibsted Grotesk, DM Mono — all open-source), so nothing loads from a third-party CDN
 - Deploy target: GitHub Pages via GitHub Actions (Phase 6)
 
 ## Repo layout

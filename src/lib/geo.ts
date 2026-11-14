@@ -27,17 +27,17 @@ export function bearingDegrees(from: LatLng, to: LatLng): number {
 }
 
 const COMPASS = [
-  { arrow: '↑', label: 'north' },
-  { arrow: '↗', label: 'northeast' },
-  { arrow: '→', label: 'east' },
-  { arrow: '↘', label: 'southeast' },
-  { arrow: '↓', label: 'south' },
-  { arrow: '↙', label: 'southwest' },
-  { arrow: '←', label: 'west' },
-  { arrow: '↖', label: 'northwest' },
+  { arrow: '↑', label: 'north', abbr: 'N' },
+  { arrow: '↗', label: 'northeast', abbr: 'NE' },
+  { arrow: '→', label: 'east', abbr: 'E' },
+  { arrow: '↘', label: 'southeast', abbr: 'SE' },
+  { arrow: '↓', label: 'south', abbr: 'S' },
+  { arrow: '↙', label: 'southwest', abbr: 'SW' },
+  { arrow: '←', label: 'west', abbr: 'W' },
+  { arrow: '↖', label: 'northwest', abbr: 'NW' },
 ]
 
-export function compassFor(bearing: number): { arrow: string; label: string } {
+export function compassFor(bearing: number): { arrow: string; label: string; abbr: string } {
   return COMPASS[Math.round(bearing / 45) % 8]!
 }
 
@@ -50,6 +50,10 @@ export function formatDistance(miles: number): string {
 export interface GuessFeedback {
   distance: string
   arrow: string
+  /** Compass abbreviation, e.g. "NE". */
+  abbr: string
+  /** Exact bearing toward the target, in degrees clockwise from north. */
+  bearing: number
   /** Spoken version, e.g. "0.8 mi northeast". */
   spoken: string
 }
@@ -57,8 +61,9 @@ export interface GuessFeedback {
 /** How far and which way the target is from a wrong guess. */
 export function feedbackFor(guess: Place, target: Place): GuessFeedback {
   const distance = formatDistance(distanceMiles(guess, target))
-  const { arrow, label } = compassFor(bearingDegrees(guess, target))
-  return { distance, arrow, spoken: `${distance} ${label}` }
+  const bearing = bearingDegrees(guess, target)
+  const { arrow, label, abbr } = compassFor(bearing)
+  return { distance, arrow, abbr, bearing, spoken: `${distance} ${label}` }
 }
 
 /** Lowercase, strip punctuation and a leading "the", collapse spaces. */

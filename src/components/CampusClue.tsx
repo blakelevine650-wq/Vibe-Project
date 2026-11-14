@@ -2,6 +2,7 @@ import { useEffect, useRef, useState } from 'react'
 import { feedbackFor, searchPlaces } from '../lib/geo'
 import { CLUE_POINTS, MAX_CLUE_GUESSES } from '../lib/scoring'
 import type { GuessablePlace, Place, RoundResults } from '../types'
+import { Compass } from './Compass'
 
 const MAX_SUGGESTIONS = 6
 
@@ -54,33 +55,40 @@ export function CampusClue({ target, places, onDone }: Props) {
   else if (last) announcement = `${last.name} is wrong. The place is ${feedbackFor(last, target).spoken} of there. New clue added.`
 
   return (
-    <section className="card">
-      <p className="eyebrow">Round 1</p>
-      <h2>Campus Clue</h2>
-      <p className="muted">Guess the mystery campus place. Each miss shows how far away it is, which way, and a new clue.</p>
+    <section className="page">
+      <p className="kicker">Section A · Campus Clue</p>
+      <h2 className="headline">Where on campus is this?</h2>
 
       <ol className="clues" aria-label="Clues">
         {target.clues.slice(0, cluesShown).map((clue, i) => (
           <li key={clue} className={i === cluesShown - 1 && !finished ? 'latest' : ''}>
+            <span className="clue-number">Clue {i + 1}</span>
             {clue}
           </li>
         ))}
       </ol>
 
       {guesses.length > 0 && (
-        <ol className="guesses" aria-label="Your guesses">
-          {guesses.map((guess) => {
+        <ol className="ledger" aria-label="Your guesses">
+          {guesses.map((guess, i) => {
             const hit = guess.id === target.id
             const fb = hit ? null : feedbackFor(guess, target)
             return (
               <li key={guess.id} className={hit ? 'hit' : 'miss'}>
-                <span className="guess-name">{guess.name}</span>
+                <span className="ledger-number" aria-hidden="true">
+                  {i + 1}
+                </span>
+                <span className="ledger-name">{guess.name}</span>
                 {fb ? (
-                  <span className="guess-feedback" aria-label={`${fb.spoken} of here`}>
-                    {fb.distance} <span className="arrow">{fb.arrow}</span>
+                  <span className="ledger-feedback" aria-label={`${fb.spoken} of here`}>
+                    <span className="ledger-distance">
+                      {fb.distance}
+                      <small>{fb.abbr}</small>
+                    </span>
+                    <Compass bearing={fb.bearing} />
                   </span>
                 ) : (
-                  <span className="guess-feedback">Correct ✓</span>
+                  <span className="ledger-feedback found">Found</span>
                 )}
               </li>
             )
@@ -95,11 +103,13 @@ export function CampusClue({ target, places, onDone }: Props) {
       {finished ? (
         <>
           <div className={`outcome ${solved ? 'win' : 'loss'}`}>
+            <span className="outcome-label">{solved ? `+${CLUE_POINTS[guesses.length - 1]} points` : 'The answer'}</span>
             <strong>{solved ? `You found it in ${guesses.length}!` : `It was ${target.name}.`}</strong>
-            <span>{solved ? `+${CLUE_POINTS[guesses.length - 1]} points` : 'No points this round.'}</span>
+            {!solved && <span className="outcome-note">No points this round.</span>}
           </div>
-          <button ref={continueRef} className="btn primary" onClick={() => onDone({ solved, guesses: guesses.length })}>
-            Continue to Quick Three
+          <button ref={continueRef} className="btn-ink" onClick={() => onDone({ solved, guesses: guesses.length })}>
+            <span>Continue to Quick Three</span>
+            <span aria-hidden="true">→</span>
           </button>
         </>
       ) : (
@@ -110,14 +120,21 @@ export function CampusClue({ target, places, onDone }: Props) {
             submitTyped()
           }}
         >
-          <label htmlFor="clue-guess" className="eyebrow">
-            Guess {guesses.length + 1} of {MAX_CLUE_GUESSES}
-          </label>
-          <div className="guess-input-row">
+          <div className="guess-head">
+            <label htmlFor="clue-guess" className="kicker">
+              Guess {guesses.length + 1} of {MAX_CLUE_GUESSES}
+            </label>
+            <span className="pips" aria-hidden="true">
+              {Array.from({ length: MAX_CLUE_GUESSES }, (_, i) => (
+                <i key={i} className={i < guesses.length ? 'used' : i === guesses.length ? 'now' : ''} />
+              ))}
+            </span>
+          </div>
+          <div className="guess-row">
             <input
               id="clue-guess"
               ref={inputRef}
-              className="text-input"
+              className="guess-input"
               type="text"
               value={query}
               placeholder="Type a building or landmark"
@@ -131,24 +148,25 @@ export function CampusClue({ target, places, onDone }: Props) {
                 setHint('')
               }}
             />
-            <button type="submit" className="btn primary">
+            <button type="submit" className="btn-ink small">
               Guess
             </button>
           </div>
-          <p id="clue-hint" className="muted" aria-live="polite">
+          <p id="clue-hint" className="hint" aria-live="polite">
             {hint}
           </p>
           {suggestions.length > 0 && (
             <ul className="suggestions" aria-label="Matching places">
               {suggestions.slice(0, MAX_SUGGESTIONS).map((place) => (
                 <li key={place.id}>
-                  <button type="button" className="btn suggestion" onClick={() => submit(place)}>
-                    {place.name}
+                  <button type="button" onClick={() => submit(place)}>
+                    <span>{place.name}</span>
+                    <span aria-hidden="true">↵</span>
                   </button>
                 </li>
               ))}
               {suggestions.length > MAX_SUGGESTIONS && (
-                <li className="muted">{suggestions.length - MAX_SUGGESTIONS} more — keep typing to narrow it down.</li>
+                <li className="suggestions-more">{suggestions.length - MAX_SUGGESTIONS} more — keep typing to narrow it down.</li>
               )}
             </ul>
           )}

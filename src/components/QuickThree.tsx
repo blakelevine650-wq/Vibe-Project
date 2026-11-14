@@ -24,12 +24,11 @@ export function QuickThree({ questions, dateKey, onDone }: Props) {
   }, [answered])
 
   return (
-    <section className="card">
-      <p className="eyebrow">Round 2</p>
-      <h2>Quick Three</h2>
+    <section className="page">
+      <p className="kicker">Section B · Quick Three</p>
       <div className="question-meta">
-        <span className="chip">{CATEGORY_LABELS[question.category]}</span>
-        <span className="muted">
+        <span className="tag">{CATEGORY_LABELS[question.category]}</span>
+        <span className="meta-note">
           Question {index + 1} of {questions.length} · {TRIVIA_POINTS} pts
         </span>
       </div>
@@ -45,8 +44,9 @@ export function QuickThree({ questions, dateKey, onDone }: Props) {
       />
 
       {answered && (
-        <button ref={nextRef} className="btn primary" onClick={() => (isLast ? onDone(answers) : setIndex(index + 1))}>
-          {isLast ? 'Continue to Tip of the Day' : 'Next question'}
+        <button ref={nextRef} className="btn-ink" onClick={() => (isLast ? onDone(answers) : setIndex(index + 1))}>
+          <span>{isLast ? 'Continue to Tip of the Day' : 'Next question'}</span>
+          <span aria-hidden="true">→</span>
         </button>
       )}
     </section>

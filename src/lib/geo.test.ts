@@ -46,7 +46,7 @@ describe('distance and direction', () => {
 
   it('combines both into feedback', () => {
     const target = place('t', 'Target', origin.lat - 0.0116, origin.lng) // ~0.8 mi south
-    expect(feedbackFor(origin, target)).toEqual({ distance: '0.8 mi', arrow: '↓', spoken: '0.8 mi south' })
+    expect(feedbackFor(origin, target)).toEqual({ distance: '0.8 mi', arrow: '↓', abbr: 'S', bearing: 180, spoken: '0.8 mi south' })
   })
 })
 

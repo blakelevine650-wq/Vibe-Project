@@ -152,3 +152,43 @@ _(What worked? What did you have to correct?)_
 
 _(What worked? What did you have to correct?)_
 
+---
+
+## Session 1 (continued) — Frontend redesign
+
+- **Date:** 2026-11-14
+- **Tool:** Claude Code (web/desktop)
+- **Model:** claude-fable-5-2
+
+### Prompt 4
+
+> use top tier frontend design skills in order to redesign the frontend to make sure it elite, polished, and of the highest quality. Should not look like every other vibe coded slop
+
+### What Claude did
+
+- Picked one concept and applied it everywhere: **the app is a student newspaper**, since the name already sounds like one.
+  - **Masthead:** a serif nameplate, "Ann Arbor, Mich. · No. 1" strip, and a maize dateline band. It shrinks once you start playing.
+  - **Sections:** the three rounds are Sections A, B and C, shown as newspaper-style tabs; finished ones are struck through in maize.
+  - **Front page:** a headline, the Play button, then an "In this edition" index with the points for each round.
+  - **Campus Clue:** the newest clue is set large like a pull quote; guesses are a ledger with a small compass dial whose needle points at the exact bearing (plus "1.5 mi SW" in text), and five squares show guesses used.
+  - **Questions:** lettered A–D rows; the right answer is highlighted in maize, a wrong pick is struck through in red.
+  - **Tip of the Day:** a dashed "clip & save" coupon with large italic step numbers.
+  - **Results:** a verdict headline that changes with your score, a very large score that counts up, a "box score" table with a total line, the share grid as a clipping, and "Next edition in" countdown.
+  - **Dark mode** is the "night edition" (toggle reads "Night ed." / "Day ed.").
+- Replaced the generic look: no rounded cards, drop shadows, pill buttons or emoji used as icons (emoji remain only in the share text, where they are the point).
+- Three open-source fonts, self-hosted via npm so nothing loads from an outside server: Fraunces (headlines), Schibsted Grotesk (text), DM Mono (labels and numbers).
+- Small motion only: screens and new clues ease in, the score counts up; all of it is turned off for people who set "reduce motion".
+- Added a favicon.
+- No game logic changed except `feedbackFor` now also returns the exact bearing and a compass abbreviation for the dial. 24 tests pass.
+- Checked every screen by screenshot at four sizes — iPhone, a 320px-wide small phone, desktop, and dark mode — with no sideways scrolling and no console errors. Fixed what the screenshots showed: section tabs overflowing on the 320px phone, the Play button sitting below the fold on the home screen, a lopsided compass needle, and misaligned labels.
+
+**Decisions made without asking**
+
+- The newspaper concept itself, and the copy that comes with it ("Today's edition", "Box score", "Front-page material.", etc.).
+- Removed the "Streak (Phase 4)" placeholder tile from the results screen; the streak will be designed in when Phase 4 builds it.
+- The third tab reads "The Tip" (the full name did not fit on small phones). The round is still called Tip of the Day everywhere else.
+
+### My notes
+
+_(What worked? What did you have to correct?)_
+

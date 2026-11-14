@@ -38,23 +38,32 @@ export function TipOfTheDay({ tip, dateKey, onDone }: Props) {
   }, [stage, result])
 
   return (
-    <section className="card">
-      <p className="eyebrow">Round 3</p>
-      <h2>Tip of the Day</h2>
-      <span className="chip">{SYSTEM_LABELS[tip.system]}</span>
+    <section className="page">
+      <p className="kicker">Section C · Tip of the Day</p>
 
       {stage === 'read' ? (
         <>
-          <h3>{tip.title}</h3>
-          <Steps steps={tip.steps} />
-          <button className="btn primary" onClick={() => setStage('check')}>
-            Got it — quick check
+          <div className="clipping">
+            <p className="clipping-label">
+              <span>Clip &amp; save</span>
+              <span>{SYSTEM_LABELS[tip.system]}</span>
+            </p>
+            <h3 className="headline">{tip.title}</h3>
+            <Steps steps={tip.steps} />
+          </div>
+          <button className="btn-ink" onClick={() => setStage('check')}>
+            <span>Got it — quick check</span>
+            <span aria-hidden="true">→</span>
           </button>
-          <p className="muted center">The steps are hidden during the check. {TIP_POINTS} pts.</p>
+          <p className="fineprint">The steps are hidden during the check. {TIP_POINTS} pts.</p>
         </>
       ) : (
         <>
-          <h3 ref={checkHeadingRef} tabIndex={-1}>
+          <div className="question-meta">
+            <span className="tag">{SYSTEM_LABELS[tip.system]}</span>
+            <span className="meta-note">Quick check · {TIP_POINTS} pts</span>
+          </div>
+          <h3 ref={checkHeadingRef} tabIndex={-1} className="check-title">
             Quick check: {tip.title}
           </h3>
           <ChoiceQuestion
@@ -70,8 +79,9 @@ export function TipOfTheDay({ tip, dateKey, onDone }: Props) {
                 <summary>Review the steps</summary>
                 <Steps steps={tip.steps} />
               </details>
-              <button ref={finishRef} className="btn primary" onClick={() => onDone(result)}>
-                See your results
+              <button ref={finishRef} className="btn-ink" onClick={() => onDone(result)}>
+                <span>See your results</span>
+                <span aria-hidden="true">→</span>
               </button>
             </>
           )}
