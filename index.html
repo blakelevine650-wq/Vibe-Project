@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+    <title>Wolverine Daily — the campus puzzle</title>
+    <meta name="description" content="An unofficial daily campus puzzle for University of Michigan students: find the mystery place, answer three questions, learn one Canvas or Wolverine Access tip." />
+    <meta property="og:title" content="Wolverine Daily" />
+    <meta property="og:description" content="A place to find, three things to know, one thing to learn. A new campus puzzle every day." />
+    <meta property="og:type" content="website" />
+    <meta name="theme-color" content="#f4efe2" />
+    <link rel="icon" type="image/svg+xml" href="./favicon.svg" />
+    <script>
+      // Set the theme before the page paints, so the night edition never flashes white.
+      try {
+        var saved = localStorage.getItem('wd:theme')
+        var dark = saved ? saved === 'dark' : window.matchMedia('(prefers-color-scheme: dark)').matches
+        document.documentElement.dataset.theme = dark ? 'dark' : 'light'
+        document.querySelector('meta[name="theme-color"]').content = dark ? '#0c1a2e' : '#f4efe2'
+      } catch (e) {}
+    </script>
+    <style>
+      html { background: #e6dfcd; }
+      html[data-theme='dark'] { background: #07111f; }
+    </style>
+  </head>
+  <body>
+    <noscript>
+      <p style="max-width: 30rem; margin: 3rem auto; padding: 0 1.25rem; font-family: Georgia, serif; font-size: 1.25rem">
+        Wolverine Daily needs JavaScript to run. Turn it on in your browser settings and reload.
+      </p>
+    </noscript>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>

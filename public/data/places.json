@@ -1,0 +1,497 @@
+[
+  {
+    "id": "burton-tower",
+    "name": "Burton Memorial Tower",
+    "lat": 42.27942,
+    "lng": -83.73871,
+    "aliases": [
+      "Burton Tower",
+      "Bell Tower"
+    ],
+    "clues": [
+      "You can hear this place before you see it.",
+      "It is one of the tallest things on Central Campus.",
+      "It has a clock face on each side.",
+      "A carillon is played from near the top.",
+      "It stands beside Hill Auditorium, at the edge of Ingalls Mall."
+    ]
+  },
+  {
+    "id": "michigan-stadium",
+    "name": "Michigan Stadium",
+    "lat": 42.26583,
+    "lng": -83.74783,
+    "aliases": [
+      "The Big House"
+    ],
+    "clues": [
+      "Most of this place sits below street level.",
+      "It is far busier on fall Saturdays than any other day.",
+      "It is on the athletic campus, south of Central Campus.",
+      "More than 100,000 people fit inside.",
+      "Its nickname is \"The Big House.\""
+    ]
+  },
+  {
+    "id": "hatcher-library",
+    "name": "Hatcher Graduate Library",
+    "lat": 42.27622,
+    "lng": -83.73818,
+    "aliases": [
+      "Hatcher",
+      "Grad Library",
+      "Graduate Library"
+    ],
+    "clues": [
+      "People come here to be quiet.",
+      "It faces the Diag.",
+      "It has a north and a south building.",
+      "It is connected to the Shapiro Undergraduate Library.",
+      "Students call it \"the Grad.\""
+    ]
+  },
+  {
+    "id": "the-cube",
+    "name": "The Cube",
+    "lat": 42.2759,
+    "lng": -83.74189,
+    "aliases": [
+      "Endover",
+      "Cube"
+    ],
+    "clues": [
+      "This is a sculpture, not a building.",
+      "It balances on one corner.",
+      "Give it a push and it spins.",
+      "It sits in Regents' Plaza.",
+      "It is next to the Michigan Union."
+    ]
+  },
+  {
+    "id": "michigan-union",
+    "name": "Michigan Union",
+    "lat": 42.27517,
+    "lng": -83.74151,
+    "aliases": [
+      "The Union"
+    ],
+    "clues": [
+      "Students have gathered here for more than a century.",
+      "It stands on State Street, at the end of South University Avenue.",
+      "It reopened in 2020 after a long renovation.",
+      "John F. Kennedy proposed the idea of the Peace Corps from its front steps in 1960.",
+      "It is the student union on Central Campus."
+    ]
+  },
+  {
+    "id": "michigan-league",
+    "name": "Michigan League",
+    "lat": 42.27935,
+    "lng": -83.73771,
+    "aliases": [
+      "The League"
+    ],
+    "clues": [
+      "It was built because women were once kept out of another campus building.",
+      "It opened in 1929.",
+      "It has a garden, a ballroom and an inn.",
+      "The Lydia Mendelssohn Theatre is inside.",
+      "It stands across Ingalls Mall from Burton Tower, on North University Avenue."
+    ]
+  },
+  {
+    "id": "hill-auditorium",
+    "name": "Hill Auditorium",
+    "lat": 42.27918,
+    "lng": -83.73908,
+    "aliases": [
+      "Hill"
+    ],
+    "clues": [
+      "People come here to listen.",
+      "It is famous for its acoustics.",
+      "Albert Kahn designed it, and it opened in 1913.",
+      "It seats about 3,500 and has a huge pipe organ.",
+      "It is the big concert hall on North University Avenue, next to Burton Tower."
+    ]
+  },
+  {
+    "id": "rackham-building",
+    "name": "Rackham Building",
+    "lat": 42.28087,
+    "lng": -83.73828,
+    "aliases": [
+      "Rackham",
+      "Rackham Graduate School"
+    ],
+    "clues": [
+      "It is named for a Detroit lawyer who was an early investor in Ford Motor Company.",
+      "It closes off the north end of Ingalls Mall.",
+      "It has an auditorium, an amphitheatre and grand study halls.",
+      "Doctoral students defend their dissertations here.",
+      "It is the home of the graduate school."
+    ]
+  },
+  {
+    "id": "angell-hall",
+    "name": "Angell Hall",
+    "lat": 42.27672,
+    "lng": -83.73975,
+    "aliases": [
+      "Angell",
+      "Fishbowl"
+    ],
+    "clues": [
+      "Its front is a long row of tall stone columns.",
+      "It faces State Street.",
+      "It is named for the university's longest-serving president.",
+      "There is an observatory and planetarium on its roof.",
+      "The computing site called the Fishbowl is here."
+    ]
+  },
+  {
+    "id": "shapiro-undergraduate-library",
+    "name": "Shapiro Undergraduate Library",
+    "lat": 42.27563,
+    "lng": -83.73719,
+    "aliases": [
+      "UGLi",
+      "Shapiro",
+      "Undergraduate Library"
+    ],
+    "clues": [
+      "It stays open late into the night.",
+      "It is linked by a walkway to an older, bigger neighbor.",
+      "Bert's Cafe is on the first floor.",
+      "Its nickname is not a compliment.",
+      "Students call it the UGLi."
+    ]
+  },
+  {
+    "id": "west-hall",
+    "name": "West Hall",
+    "lat": 42.27591,
+    "lng": -83.73636,
+    "aliases": [
+      "Engineering Arch"
+    ],
+    "clues": [
+      "People walk through this building as well as into it.",
+      "It sits at the southeast corner of the Diag.",
+      "It was built for the engineering college.",
+      "Tradition says a kiss under its arch at midnight means you'll marry.",
+      "Its name is a compass direction, and its arch is called the Engineering Arch."
+    ]
+  },
+  {
+    "id": "museum-of-art",
+    "name": "Museum of Art",
+    "lat": 42.27559,
+    "lng": -83.73984,
+    "aliases": [
+      "UMMA"
+    ],
+    "clues": [
+      "It is free to walk in.",
+      "It stands across State Street from the Michigan Union.",
+      "Its older half was built as Alumni Memorial Hall.",
+      "A glassy modern wing was added in 2009.",
+      "It goes by four letters: UMMA."
+    ]
+  },
+  {
+    "id": "law-quad",
+    "name": "Law Quad",
+    "lat": 42.27367,
+    "lng": -83.74036,
+    "aliases": [
+      "Law Quadrangle",
+      "Law School"
+    ],
+    "clues": [
+      "It looks like it was borrowed from Oxford or Cambridge.",
+      "Its stone buildings went up in the 1920s and 1930s.",
+      "A gift from alumnus William W. Cook paid for it.",
+      "Its Reading Room has stained glass and a vaulted ceiling.",
+      "Future lawyers study here."
+    ]
+  },
+  {
+    "id": "ross-school-of-business",
+    "name": "Ross School of Business",
+    "lat": 42.27278,
+    "lng": -83.73697,
+    "aliases": [
+      "Ross"
+    ],
+    "clues": [
+      "A very large gift gave this school its current name in 2004.",
+      "It sits on the south side of Central Campus, along Tappan Avenue.",
+      "Its main building has a glass-roofed Winter Garden.",
+      "MBA and BBA students take classes here.",
+      "It is the business school."
+    ]
+  },
+  {
+    "id": "diag",
+    "name": "The Diag",
+    "lat": 42.2771,
+    "lng": -83.73801,
+    "aliases": [
+      "Diag"
+    ],
+    "clues": [
+      "Thousands of students cross it every day.",
+      "It is not a building.",
+      "Its name comes from the sidewalks that cut across it.",
+      "A brass block M is set into the pavement at its center.",
+      "It is the open space at the heart of Central Campus."
+    ]
+  },
+  {
+    "id": "biological-sciences-building",
+    "name": "Biological Sciences Building",
+    "lat": 42.279,
+    "lng": -83.7345,
+    "aliases": [
+      "BSB",
+      "Museum of Natural History"
+    ],
+    "clues": [
+      "Mastodons live here, sort of.",
+      "It is one of the newer buildings on Central Campus, opened in 2018.",
+      "It has a planetarium and dome theater.",
+      "The Museum of Natural History moved here from the Ruthven Building.",
+      "Its initials are BSB."
+    ]
+  },
+  {
+    "id": "nichols-arboretum",
+    "name": "Nichols Arboretum",
+    "lat": 42.27908,
+    "lng": -83.72238,
+    "aliases": [
+      "The Arb",
+      "Arb"
+    ],
+    "clues": [
+      "No classes meet here, but students come anyway.",
+      "It slopes down to the Huron River.",
+      "It has a famous peony garden.",
+      "It sits just east of the Hill residence halls.",
+      "Everyone calls it the Arb."
+    ]
+  },
+  {
+    "id": "the-rock",
+    "name": "The Rock",
+    "lat": 42.27256,
+    "lng": -83.72849,
+    "aliases": [
+      "Painted Rock"
+    ],
+    "clues": [
+      "It never looks the same for long.",
+      "It sits at the corner of Hill Street and Washtenaw Avenue.",
+      "Student groups come at night to cover it.",
+      "It is buried under countless layers of paint.",
+      "It is a boulder."
+    ]
+  },
+  {
+    "id": "crisler-center",
+    "name": "Crisler Center",
+    "lat": 42.26504,
+    "lng": -83.74667,
+    "aliases": [
+      "Crisler",
+      "Crisler Arena"
+    ],
+    "clues": [
+      "It is loudest in the winter.",
+      "It is next door to Michigan Stadium.",
+      "It opened in 1967.",
+      "It is named for a football coach, but football is not played here.",
+      "The basketball teams play here."
+    ]
+  },
+  {
+    "id": "yost-ice-arena",
+    "name": "Yost Ice Arena",
+    "lat": 42.26758,
+    "lng": -83.74102,
+    "aliases": [
+      "Yost"
+    ],
+    "clues": [
+      "It was built in the 1920s as a field house.",
+      "It is on South State Street.",
+      "It was converted for a different sport in 1973.",
+      "It is named for a legendary football coach.",
+      "The hockey team plays here."
+    ]
+  },
+  {
+    "id": "duderstadt-center",
+    "name": "Duderstadt Center",
+    "lat": 42.29118,
+    "lng": -83.71577,
+    "aliases": [
+      "The Dude",
+      "Duderstadt"
+    ],
+    "clues": [
+      "It almost never closes.",
+      "It is on North Campus.",
+      "It was originally called the Media Union.",
+      "It holds a library, design labs and recording studios.",
+      "Students call it the Dude."
+    ]
+  },
+  {
+    "id": "lurie-bell-tower",
+    "name": "Lurie Bell Tower",
+    "lat": 42.29203,
+    "lng": -83.71618,
+    "aliases": [
+      "Lurie Tower",
+      "North Campus Bell Tower"
+    ],
+    "clues": [
+      "You can hear it across North Campus.",
+      "It was finished in 1996.",
+      "It holds a 60-bell carillon.",
+      "It stands near the Duderstadt Center.",
+      "It is North Campus's bell tower."
+    ]
+  },
+  {
+    "id": "pierpont-commons",
+    "name": "Pierpont Commons",
+    "lat": 42.29112,
+    "lng": -83.7176,
+    "aliases": [
+      "Pierpont"
+    ],
+    "clues": [
+      "North Campus comes here to eat and hang out.",
+      "Blue buses stop right outside.",
+      "It used to be called the North Campus Commons.",
+      "It is named for a longtime university vice president.",
+      "It is the student union of North Campus."
+    ]
+  },
+  {
+    "id": "south-quad",
+    "name": "South Quad",
+    "lat": 42.27371,
+    "lng": -83.74215,
+    "aliases": [
+      "South Quadrangle"
+    ],
+    "clues": [
+      "More than a thousand students live here.",
+      "It opened in 1951.",
+      "Its dining hall is one of the largest on campus.",
+      "It is on East Madison Street, a short walk from the Michigan Union.",
+      "Its name is a compass direction — the opposite of north — plus \"Quad.\""
+    ]
+  },
+  {
+    "id": "east-quad",
+    "name": "East Quad",
+    "lat": 42.27293,
+    "lng": -83.73516,
+    "aliases": [
+      "East Quadrangle"
+    ],
+    "clues": [
+      "Students live and take classes in the same building here.",
+      "It is the home of the Residential College.",
+      "It is on East University Avenue.",
+      "It reopened in 2013 after a full renovation.",
+      "Its name is the direction the sun rises, plus \"Quad.\""
+    ]
+  },
+  {
+    "id": "mosher-jordan-hall",
+    "name": "Mosher-Jordan Hall",
+    "lat": 42.28015,
+    "lng": -83.7317,
+    "aliases": [
+      "MoJo",
+      "Mosher Jordan"
+    ],
+    "clues": [
+      "It is on the Hill.",
+      "It opened in 1930 as a women's residence hall.",
+      "It is named for two deans of women.",
+      "The Hill Dining Center is attached to it.",
+      "Its nickname is MoJo."
+    ]
+  },
+  {
+    "id": "bursley-hall",
+    "name": "Bursley Hall",
+    "lat": 42.2938,
+    "lng": -83.72095,
+    "aliases": [
+      "Bursley"
+    ],
+    "clues": [
+      "It is the largest residence hall on its campus.",
+      "It is on North Campus.",
+      "It opened in 1967.",
+      "It has its own dining hall and sits next to the Baits houses.",
+      "It is named for a longtime dean of students, Joseph Bursley."
+    ]
+  },
+  {
+    "id": "power-center",
+    "name": "Power Center",
+    "lat": 42.28085,
+    "lng": -83.73575,
+    "aliases": [
+      "Power Center for the Performing Arts"
+    ],
+    "clues": [
+      "Its glass front reflects the trees across the street.",
+      "It opened in 1971.",
+      "It is at Fletcher Street and Huron Street.",
+      "Plays, dance and musical theatre are staged here.",
+      "It is the Power Center for the Performing Arts."
+    ]
+  },
+  {
+    "id": "kelsey-museum-of-archaeology",
+    "name": "Kelsey Museum of Archaeology",
+    "lat": 42.27675,
+    "lng": -83.74137,
+    "aliases": [
+      "Kelsey Museum"
+    ],
+    "clues": [
+      "What it holds is thousands of years older than the building.",
+      "It is on State Street, across from Angell Hall.",
+      "The stone building with a turret was once called Newberry Hall.",
+      "Inside are artifacts from ancient Egypt, Greece and Rome.",
+      "It is the archaeology museum."
+    ]
+  },
+  {
+    "id": "clements-library",
+    "name": "Clements Library",
+    "lat": 42.27547,
+    "lng": -83.738,
+    "aliases": [
+      "Clements"
+    ],
+    "clues": [
+      "Its specialty is early American history.",
+      "It is on South University Avenue, next to the President's House.",
+      "Albert Kahn designed it, and it opened in 1923.",
+      "It holds rare books, maps and manuscripts.",
+      "It is named for regent William L. Clements."
+    ]
+  }
+]

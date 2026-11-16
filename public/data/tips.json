@@ -1,0 +1,321 @@
+[
+  {
+    "id": "canvas-grade-breakdown",
+    "system": "canvas",
+    "title": "How to see your grade breakdown in Canvas",
+    "steps": [
+      "Open Canvas and click the course from your Dashboard.",
+      "In the course menu on the left, click Grades.",
+      "Scroll the list to see your score on each assignment.",
+      "Look at the sidebar for your total and how each assignment group is weighted."
+    ],
+    "check": {
+      "question": "Which link in the course menu do you click first?",
+      "choices": [
+        "Modules",
+        "Grades",
+        "Syllabus",
+        "People"
+      ],
+      "answerIndex": 1
+    }
+  },
+  {
+    "id": "canvas-what-if-grades",
+    "system": "canvas",
+    "title": "How to test a \"What-If\" grade in Canvas",
+    "steps": [
+      "Open the course and click Grades.",
+      "Click the score (or the dash) next to an assignment.",
+      "Type the score you think you might get and press Enter.",
+      "Check your total: it updates to show the What-If grade.",
+      "Click the arrow next to the score to put the real one back."
+    ],
+    "check": {
+      "question": "What do you click to enter a What-If score?",
+      "choices": [
+        "The assignment's score",
+        "The assignment's due date",
+        "The course name",
+        "The Syllabus link"
+      ],
+      "answerIndex": 0
+    }
+  },
+  {
+    "id": "canvas-notifications",
+    "system": "canvas",
+    "title": "How to choose which Canvas notifications you get",
+    "steps": [
+      "Click Account in the dark menu on the far left.",
+      "Click Notifications.",
+      "Find a type, such as Due Date or Announcement.",
+      "Click the icon next to it and pick: right away, daily summary, weekly summary, or off."
+    ],
+    "check": {
+      "question": "Where do you start to change notifications?",
+      "choices": [
+        "Account",
+        "Calendar",
+        "Inbox",
+        "Dashboard"
+      ],
+      "answerIndex": 0
+    }
+  },
+  {
+    "id": "canvas-submit-assignment",
+    "system": "canvas",
+    "title": "How to submit an assignment in Canvas",
+    "steps": [
+      "Open the course and click Assignments.",
+      "Click the name of the assignment.",
+      "Click Start Assignment.",
+      "Upload your file, or type or paste your work, depending on what the instructor allows.",
+      "Click Submit Assignment and look for the \"Submitted\" confirmation."
+    ],
+    "check": {
+      "question": "Which button do you click to begin your submission?",
+      "choices": [
+        "Start Assignment",
+        "Open Grades",
+        "New Discussion",
+        "Send Message"
+      ],
+      "answerIndex": 0
+    }
+  },
+  {
+    "id": "canvas-view-feedback",
+    "system": "canvas",
+    "title": "How to read your instructor's feedback in Canvas",
+    "steps": [
+      "Open the course and click Grades.",
+      "Click the name of the assignment.",
+      "Read the comments shown with your submission.",
+      "If there is a rubric, click to view it and see how each row was scored."
+    ],
+    "check": {
+      "question": "Where do you find feedback on a graded assignment?",
+      "choices": [
+        "Under Grades, by clicking the assignment",
+        "In the course Syllabus",
+        "Under People",
+        "In Account settings"
+      ],
+      "answerIndex": 0
+    }
+  },
+  {
+    "id": "canvas-calendar",
+    "system": "canvas",
+    "title": "How to see every due date in the Canvas Calendar",
+    "steps": [
+      "Click Calendar in the dark menu on the far left.",
+      "Check the list of courses on the right and tick the ones you want to see.",
+      "Switch between Week, Month and Agenda at the top.",
+      "Click any item to open the assignment."
+    ],
+    "check": {
+      "question": "Which Calendar view shows your upcoming items as a list?",
+      "choices": [
+        "Agenda",
+        "Gallery",
+        "Timeline",
+        "Modules"
+      ],
+      "answerIndex": 0
+    }
+  },
+  {
+    "id": "canvas-inbox-message",
+    "system": "canvas",
+    "title": "How to message your instructor in Canvas",
+    "steps": [
+      "Click Inbox in the dark menu on the far left.",
+      "Click the compose (pencil) icon.",
+      "Choose the course.",
+      "Click the address-book icon next to To, then pick Teachers and your instructor.",
+      "Write a subject and message, then click Send."
+    ],
+    "check": {
+      "question": "Which Canvas tool do you use to send the message?",
+      "choices": [
+        "Inbox",
+        "Calendar",
+        "Grades",
+        "Files"
+      ],
+      "answerIndex": 0
+    }
+  },
+  {
+    "id": "canvas-favorite-courses",
+    "system": "canvas",
+    "title": "How to choose which courses show on your Canvas Dashboard",
+    "steps": [
+      "Click Courses in the dark menu on the far left.",
+      "Click All Courses.",
+      "Click the star next to each course you want on your Dashboard.",
+      "Go back to the Dashboard: only starred courses are shown."
+    ],
+    "check": {
+      "question": "What do you click next to a course to add it to your Dashboard?",
+      "choices": [
+        "The star",
+        "The gear",
+        "The bell",
+        "The pencil"
+      ],
+      "answerIndex": 0
+    }
+  },
+  {
+    "id": "wa-class-schedule",
+    "system": "wolverine-access",
+    "title": "How to find your class schedule in Wolverine Access",
+    "steps": [
+      "Go to Wolverine Access and log in with your uniqname.",
+      "Open Student Business.",
+      "Choose the Backpack/Registration tile.",
+      "Pick the term to see your enrolled classes with times and locations."
+    ],
+    "check": {
+      "question": "Which section of Wolverine Access do you open after logging in?",
+      "choices": [
+        "Student Business",
+        "Faculty Business",
+        "University Business",
+        "Parents & Family"
+      ],
+      "answerIndex": 0
+    }
+  },
+  {
+    "id": "wa-unofficial-transcript",
+    "system": "wolverine-access",
+    "title": "How to view your unofficial transcript in Wolverine Access",
+    "steps": [
+      "Log in to Wolverine Access and open Student Business.",
+      "Open the Student Center.",
+      "Under Academics, choose View Unofficial Transcript.",
+      "Read it on screen, or use your browser's print option to save a PDF."
+    ],
+    "check": {
+      "question": "Under which heading is the unofficial transcript link?",
+      "choices": [
+        "Academics",
+        "Finances",
+        "Personal Information",
+        "Admissions"
+      ],
+      "answerIndex": 0
+    }
+  },
+  {
+    "id": "wa-enrollment-appointment",
+    "system": "wolverine-access",
+    "title": "How to find your registration appointment in Wolverine Access",
+    "steps": [
+      "Log in to Wolverine Access and open Student Business.",
+      "Choose Backpack/Registration.",
+      "Pick the upcoming term.",
+      "Look for Enrollment Appointment: it shows the date and time you can start registering."
+    ],
+    "check": {
+      "question": "What is the date and time you can start registering called?",
+      "choices": [
+        "Enrollment Appointment",
+        "Drop Deadline",
+        "Add Window",
+        "Class Permission"
+      ],
+      "answerIndex": 0
+    }
+  },
+  {
+    "id": "wa-backpack",
+    "system": "wolverine-access",
+    "title": "How to save classes in your Backpack before registration",
+    "steps": [
+      "Log in to Wolverine Access and open Student Business.",
+      "Choose Backpack/Registration and pick the term.",
+      "Search for a class by subject and number.",
+      "Select the section you want and add it to your Backpack.",
+      "When your appointment opens, register straight from the Backpack."
+    ],
+    "check": {
+      "question": "Where do you save classes ahead of your registration time?",
+      "choices": [
+        "Backpack",
+        "Locker",
+        "Wish List",
+        "Shopping Bag"
+      ],
+      "answerIndex": 0
+    }
+  },
+  {
+    "id": "wa-student-account",
+    "system": "wolverine-access",
+    "title": "How to check what you owe in Wolverine Access",
+    "steps": [
+      "Log in to Wolverine Access and open Student Business.",
+      "Open the Student Center.",
+      "Under Finances, open your account inquiry.",
+      "Review the charges, payments and the amount due."
+    ],
+    "check": {
+      "question": "Under which heading do you find your account balance?",
+      "choices": [
+        "Finances",
+        "Academics",
+        "Personal Information",
+        "Holds"
+      ],
+      "answerIndex": 0
+    }
+  },
+  {
+    "id": "wa-update-address",
+    "system": "wolverine-access",
+    "title": "How to update your address and emergency contact in Wolverine Access",
+    "steps": [
+      "Log in to Wolverine Access and open Student Business.",
+      "Open Campus Personal Information.",
+      "Choose Addresses or Emergency Contacts.",
+      "Edit the entry and click Save."
+    ],
+    "check": {
+      "question": "Which page holds your address and emergency contacts?",
+      "choices": [
+        "Campus Personal Information",
+        "Backpack/Registration",
+        "Financial Aid",
+        "Course Guide"
+      ],
+      "answerIndex": 0
+    }
+  },
+  {
+    "id": "wa-financial-aid",
+    "system": "wolverine-access",
+    "title": "How to view your financial aid award in Wolverine Access",
+    "steps": [
+      "Log in to Wolverine Access and open Student Business.",
+      "Open the Student Center.",
+      "Under Finances, choose View Financial Aid.",
+      "Pick the aid year to see each award and its amount."
+    ],
+    "check": {
+      "question": "What do you pick to see your awards for a given year?",
+      "choices": [
+        "The aid year",
+        "The term's class list",
+        "Your major",
+        "Your residence hall"
+      ],
+      "answerIndex": 0
+    }
+  }
+]
