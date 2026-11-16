@@ -9,7 +9,7 @@ Session 1 of Wolverine Daily, Claude Code (cloud session), 14–16 November 2026
 - Local file paths are shortened to `<repo>` and `<scratchpad>`, and personal contact details are removed.
 - Models: the session was set to claude-opus-5-5 but ran on claude-fable-5-2 from the first prompt through Prompt 8; the user switched to claude-opus-5-5 before Prompt 9.
 
-11 user prompts in total.
+12 user prompts in total.
 
 ---
 
@@ -1873,3 +1873,80 @@ Thanks. I've put your words into Part 1, fixing only spelling and grammar, and r
 
 - *Tool —* **Bash**: Insert the user's Part 1 draft, refresh the appendix, rebuild the PDF, and push
 - *Tool —* **SendUserFile**: sent `Wolverine-Daily-Assignment.pdf` — “PDF with your Part 1 draft in it (about 210 words so far)”
+```text
+Part 1 words: 207
+pages 45
+[Your name]
+SI 110 — Section [number]
+16 November 2026
+Wolverine Daily: A Vibe Coding Reflection
+Part 1: Written Reflection
+Original Vision
+I set out to build a daily game and brainstormed with Claude. I was inspired to do this because 
+people like to play those short mini games like Wordle, so I wanted to create something similar, 
+except themed for Michigan students.
+The Vibe Coding Journey
+I used Claude, which was offering free use of Fable 5.2, the most advanced model out there. I 
+have vibe coded products before this summer and have a live product called Prism, so I had some 
+prior experi
+no private email
+branch 'claude/serene-euler-9pzpky' set up to track 'origin/claude/serene-euler-9pzpky'.
+```
+
+**Claude:**
+
+The rebuilt PDF has your words in Part 1, changed only for spelling and grammar (45 pages; pushed). As it stands, Part 1 would land in the rubric's "Below Expectations" band, mainly for these five reasons:
+
+1. **It's too short.** It's about 210 words and the minimum is 750. "Why Humans Are Still Foundational" and "What LLMs Do Well" are still empty, and both are required.
+
+2. **"The LLM did not fall short in any aspect"** is the line most likely to hurt you. The rubric drops to Below Expectations when there's "no clear account of the LLM's limitations." Your own project also contradicts it, and the evidence is already in your PDF:
+   - **Coordinates:** 34 of the 62 campus coordinates Claude wrote from memory were off by more than 100 ft. It put Burton Tower on the wrong side of the Diag, about 1,900 ft off.
+   - **Unchecked content:** the clues, trivia and Wolverine Access steps came from memory, and nobody has checked them yet. Claude said it couldn't see those screens.
+   - **Search bug:** "di" listed 28 places. Claude's own tests didn't catch it; it was spotted while taking screenshots.
+   - **Things it couldn't do:** turn on GitHub Pages, reach blocked websites, or choose the launch date.
+
+   Your frontend point is a real limitation and worth keeping; it reads stronger alongside one or two of these.
+
+3. **Two statements don't match your appendix.** A grader can check both against the transcript.
+   - "Put Claude in planning mode": in this session you pasted in a finished plan; planning mode was never used. If you planned in a separate chat, say so.
+   - "Used explorer agents to test": no agents were used here. Claude tested by driving a headless browser with scripts it wrote, playing the game and screenshotting each screen. If you mean another project, such as Prism, say that.
+
+   The same goes for frontend skills: none were downloaded for this build. The newspaper redesign came from your one-line prompt.
+
+4. **GitHub and Twitter won't count as sources.** The assignment requires two high-quality sources cited in your text. The three I found are already in the References; each needs at least one in-text citation, for example (Sarkar & Drosos, 2025). Places they fit your own points:
+   - **Planning matters:** Sarkar & Drosos (2025) found vibe coding shifts skill toward managing context and evaluating output, which is what your phased plan did.
+   - **Using an elite model:** METR (Becker et al., 2025) found experienced developers were 19% slower with AI while believing they were faster. That complicates "the model is good enough."
+   - **Did you review the code?** Willison (2025) says vibe coding means not reviewing the code. Did you read any of it?
+
+5. **For the two empty sections,** you could answer these in your own words:
+   - **Humans:** What did you decide that Claude wouldn't have? Splitting the guess list from the answers, rejecting the first design, wanting coordinates from a real map, and making the repo public are all yours. How long would checking the 346 content rows take, compared with the one-hour build?
+   - **LLMs do well:** What surprised you? A deployable app with 30 tests in about an hour, from 7 prompts. Claude said what it hadn't tested and refused to guess the launch date.
+
+Send me the new and revised sections as you write them and I'll drop them in, give you the word count, and regenerate the PDF. Also fill in your name and section, and merge the pull request so the live link works.
+
+
+> *2026-11-16 18:35 UTC — automated notification (pull-request watch / scheduled check-in), not typed by the user.*
+
+- *Tool —* **ReadNotifications**: 
+- *Tool —* **github:pull_request_read**: method=get_check_runs, owner=blakelevine650-wq, repo=Vibe-Project, pullNumber=1
+```text
+{"total_count":2,"check_runs":[{"id":133520843838,"name":"deploy","status":"completed","conclusion":"skipped","html_url":"https://github.com/blakelevine650-wq/Vibe-Project/actions/runs/43930255503/job/133520843838","details_url":"https://github.com/blakelevine650-wq/Vibe-Project/actions/runs/43930255503/job/133520843838","started_at":"2026-11-16T18:35:12Z","completed_at":"2026-11-16T18:35:12Z"},{"id":133520446226,"name":"build","status":"completed","conclusion":"success","html_url":"https://github.com/blakelevine650-wq/Vibe-Project/actions/runs/43930255503/job/133520446226","details_url":"https://github.com/blakelevine650-wq/Vibe-Project/actions/runs/43930255503/job/133520446226","started_at":"2026-11-16T18:34:36Z","completed_at":"2026-11-16T18:35:11Z"}]}
+```
+
+**Claude:**
+
+The latest push, with your Part 1 draft, passed its checks too: tests and build succeeded, and deploy was skipped as usual for a pull request. [blakelevine650-wq/Vibe-Project#1](https://github.com/blakelevine650-wq/Vibe-Project/pull/1) is still ready to merge. Send the revised and new sections whenever they're ready.
+
+
+---
+
+## Prompt 12 — 2026-11-16 18:37 UTC
+
+**User:**
+
+I decided that claude wouldn thaver the direction of the project as I was the one guiding it, vibe coding allows the barrier to entry to be obsolete since now you have the best coding tool that is better and faster than na yyman. 
+
+LLMs are the key to speed, allows me to have a MVP and then alter from there. Allows me the creativity aspect while the LLM executes it
+
+- *Tool —* **Bash**: Insert the two new sections, refresh the appendix, rebuild the PDF, and push
+- *Tool —* **SendUserFile**: sent `Wolverine-Daily-Assignment.pdf` — “All five sections now have your text; Part 1 is about 260 words”

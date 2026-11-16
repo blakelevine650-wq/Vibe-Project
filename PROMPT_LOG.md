@@ -412,3 +412,17 @@ _(Fill in.)_
 
 _(Fill in.)_
 
+---
+
+### Prompt 12
+
+> _[My own text for "Why humans are still foundational" and "What LLMs do well". Reproduced word for word in the appendix transcript.]_
+
+### What Claude did
+
+- Put both sections into Part 1, fixing only spelling and grammar, and rebuilt the PDF. All five sections now have text; the total was still below 750 words.
+
+### My notes
+
+_(Fill in.)_
+
