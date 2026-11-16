@@ -456,3 +456,17 @@ _(Fill in.)_
 
 _(Fill in.)_
 
+---
+
+### Prompt 15
+
+> _[Another paragraph for "Why humans are still foundational". Reproduced word for word in the appendix transcript.]_
+
+### What Claude did
+
+- Added it to that section with spelling and grammar fixed, and rebuilt the PDF.
+
+### My notes
+
+_(Fill in.)_
+

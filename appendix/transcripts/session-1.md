@@ -9,7 +9,7 @@ Session 1 of Wolverine Daily, Claude Code (cloud session), 14–16 November 2026
 - Local file paths are shortened to `<repo>` and `<scratchpad>`, and personal contact details are removed.
 - Models: the session was set to claude-opus-5-5 but ran on claude-fable-5-2 from the first prompt through Prompt 8; the user switched to claude-opus-5-5 before Prompt 9.
 
-15 user prompts in total.
+16 user prompts in total.
 
 ---
 
@@ -2120,3 +2120,55 @@ Found it: roadmap.sh's [*Vibe Coding Best Practices: How To Get Consistent Resul
 
 - *Tool —* **Bash**: Trim uncited references, add the roadmap.sh source and paragraph, rebuild the PDF and push
 - *Tool —* **SendUserFile**: sent `Wolverine-Daily-Assignment.pdf` — “References now match your citations; Part 1 is about 525 words”
+```text
+Part 1 words: 524
+citations in text: ['(roadmap.sh, n.d.)', '(Torres, 2026)']
+## References
+
+roadmap.sh. (n.d.). *Vibe coding best practices: How to get consistent results*. https://roadmap.sh/vibe-coding/best-practices
+
+Torres, T. (2026, April). *Vibe coding best practices: Avoid the doom loop with planning and code reviews*. Product Talk. https://producttalk.org/2026/04/vibe-coding-best-practices/
+
+
+pages 53
+no private email
+branch 'claude/serene-euler-9pzpky' set up to track 'origin/claude/serene-euler-9pzpky'.
+```
+
+**Claude:**
+
+The References now list only the two sources you cite, roadmap.sh (n.d.) and Torres (2026). Each appears in the text, so you meet the two-source requirement. Your new paragraph is in "The Vibe Coding Journey" with spelling and grammar fixes only; if it belongs in another section, tell me and I'll move it. The PDF is rebuilt and pushed.
+
+Part 1 is now about 525 words, so you need about 225 more to reach 750.
+
+Three things to check in what you have:
+- **What /compact does.** Your paragraph says it saves the AI from reading through the whole code. The roadmap.sh page describes it as keeping the important code and decisions from a long session while freeing up space. In other words, it summarizes the conversation so far rather than skipping the code.
+- **Whether you used it here.** You didn't run /compact in this session; the appendix shows that. "I knew about it" is fine, but don't imply you used it on this build.
+- **"Did not fall short in any aspect"** is still the first sentence of "Where the LLM Fell Short," right before your doom-loop paragraph.
+
+The remaining 225 words would do the most good in "Why Humans Are Still Foundational" (one or two decisions you made that changed the product) and "What LLMs Do Well" (a concrete example or number from your build). Send them over and I'll do the final rebuild. Remember to merge the pull request before you submit.
+
+
+> *2026-11-16 19:07 UTC — automated notification (pull-request watch / scheduled check-in), not typed by the user.*
+
+- *Tool —* **ReadNotifications**: 
+- *Tool —* **github:pull_request_read**: method=get_check_runs, owner=blakelevine650-wq, repo=Vibe-Project, pullNumber=1
+```text
+{"total_count":2,"check_runs":[{"id":133540411249,"name":"deploy","status":"completed","conclusion":"skipped","html_url":"https://github.com/blakelevine650-wq/Vibe-Project/actions/runs/43935895536/job/133540411249","details_url":"https://github.com/blakelevine650-wq/Vibe-Project/actions/runs/43935895536/job/133540411249","started_at":"2026-11-16T19:07:04Z","completed_at":"2026-11-16T19:07:04Z"},{"id":133540260510,"name":"build","status":"completed","conclusion":"success","html_url":"https://github.com/blakelevine650-wq/Vibe-Project/actions/runs/43935895536/job/133540260510","details_url":"https://github.com/blakelevine650-wq/Vibe-Project/actions/runs/43935895536/job/133540260510","started_at":"2026-11-16T19:06:51Z","completed_at":"2026-11-16T19:07:03Z"}]}
+```
+
+**Claude:**
+
+The push with the trimmed references and the roadmap.sh paragraph passed its checks on [blakelevine650-wq/Vibe-Project#1](https://github.com/blakelevine650-wq/Vibe-Project/pull/1). The build succeeded, and deploy was skipped as usual for a pull request. Part 1 is at about 525 words, so send the remaining ~225 whenever they're ready.
+
+
+---
+
+## Prompt 16 — 2026-11-16 19:22 UTC
+
+**User:**
+
+Humans are stiill foundational because at least for me the business perspective. Human judgement is the quintessential thing since it allows you to translate your intent and have a better understanding at least for yourselkf about scoping and real world requirements
+
+- *Tool —* **Bash**: Add the new paragraph, refresh the appendix, rebuild the PDF and push
+- *Tool —* **SendUserFile**: sent `Wolverine-Daily-Assignment.pdf` — “Updated PDF; Part 1 is about 570 words”
