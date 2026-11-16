@@ -426,3 +426,18 @@ _(Fill in.)_
 
 _(Fill in.)_
 
+---
+
+### Prompt 13
+
+> _[My name and section, two more paragraphs for Part 1, and a source I found (Product Talk, "Vibe coding best practices"). Reproduced word for word in the appendix transcript.]_
+
+### What Claude did
+
+- Put my name and section on page 1, added my paragraphs to "The Vibe Coding Journey" and "Where the LLM Fell Short" with spelling and grammar fixed, and added my source to the References as Torres (2026), with an in-text citation where I mention it.
+- The network blocked producttalk.org, so the article details come from search results.
+
+### My notes
+
+_(Fill in.)_
+

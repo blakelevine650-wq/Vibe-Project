@@ -9,7 +9,7 @@ Session 1 of Wolverine Daily, Claude Code (cloud session), 14–16 November 2026
 - Local file paths are shortened to `<repo>` and `<scratchpad>`, and personal contact details are removed.
 - Models: the session was set to claude-opus-5-5 but ran on claude-fable-5-2 from the first prompt through Prompt 8; the user switched to claude-opus-5-5 before Prompt 9.
 
-12 user prompts in total.
+14 user prompts in total.
 
 ---
 
@@ -1950,3 +1950,106 @@ LLMs are the key to speed, allows me to have a MVP and then alter from there. Al
 
 - *Tool —* **Bash**: Insert the two new sections, refresh the appendix, rebuild the PDF, and push
 - *Tool —* **SendUserFile**: sent `Wolverine-Daily-Assignment.pdf` — “All five sections now have your text; Part 1 is about 260 words”
+```text
+Part 1 words: 280
+pages 47
+no private email
+branch 'claude/serene-euler-9pzpky' set up to track 'origin/claude/serene-euler-9pzpky'.
+```
+
+**Claude:**
+
+Both sections are in, with only spelling and grammar fixed, and the rebuilt PDF is pushed. All five sections now have text. Part 1 is about 280 words; the minimum is 750.
+
+Two points before you add more:
+
+- **The "humans" section argues the other way.** Its heading asks why humans are still foundational, but "better and faster than any human" argues they matter less. Your first sentence is the stronger point: you directed the project and Claude didn't. One or two concrete moments would make it land:
+  - You split the guess list from the answers so it wouldn't give the answer away.
+  - You rejected the first design.
+  - You insisted on real map coordinates instead of memory.
+  - You made the repo public and turned on Pages.
+- **The earlier problems are unchanged.** "Did not fall short in any aspect" is still in. "Planning mode" and "explorer agents" still don't match your appendix. Part 1 still has no in-text citations to the three sources in your References.
+
+The quickest route to 750 is to expand what you've already said with specifics from your build. The numbers are in the outline (`submission/reflection-outline.md`): about an hour from empty repo to deployable app, 7 prompts, no hand-written code, 30 tests, and 34 of 62 memory-written coordinates more than 100 ft off. Add a sentence or two citing a source to each section.
+
+Send me the next pass whenever it's ready and I'll drop it in and rebuild. Also fill in your name and section, and merge the pull request before you submit.
+
+
+> *2026-11-16 18:38 UTC — automated notification (pull-request watch / scheduled check-in), not typed by the user.*
+
+- *Tool —* **ReadNotifications**: 
+- *Tool —* **github:pull_request_read**: method=get_check_runs, owner=blakelevine650-wq, repo=Vibe-Project, pullNumber=1
+```text
+{"total_count":2,"check_runs":[{"id":133522530998,"name":"deploy","status":"completed","conclusion":"skipped","html_url":"https://github.com/blakelevine650-wq/Vibe-Project/actions/runs/43930810923/job/133522530998","details_url":"https://github.com/blakelevine650-wq/Vibe-Project/actions/runs/43930810923/job/133522530998","started_at":"2026-11-16T18:37:56Z","completed_at":"2026-11-16T18:37:56Z"},{"id":133522369786,"name":"build","status":"completed","conclusion":"success","html_url":"https://github.com/blakelevine650-wq/Vibe-Project/actions/runs/43930810923/job/133522369786","details_url":"https://github.com/blakelevine650-wq/Vibe-Project/actions/runs/43930810923/job/133522369786","started_at":"2026-11-16T18:37:42Z","completed_at":"2026-11-16T18:37:56Z"}]}
+```
+
+**Claude:**
+
+The push with your two new sections passed its checks on [blakelevine650-wq/Vibe-Project#1](https://github.com/blakelevine650-wq/Vibe-Project/pull/1): the build succeeded, and deploy was skipped as usual for a pull request. It's still ready to merge whenever you want the live link working.
+
+
+---
+
+## Prompt 13 — 2026-11-16 18:41 UTC
+
+**User:**
+
+What else am i missing in the document
+
+**Claude:**
+
+Measured against the assignment and its rubric, here's what's still missing, most costly first.
+
+**Will cost the most points**
+1. **Length.** Part 1 is about 280 words; it needs 750–1,000.
+2. **No in-text citations.** The three sources are listed in the References, but Part 1 never cites them. The rubric expects them "integrated… to sharpen the analysis," not just listed. Each needs at least one citation in the text, such as (Sarkar & Drosos, 2025).
+3. **No real account of the LLM's limits.** "Did not fall short in any aspect" is the specific thing the rubric marks down. Your own project has concrete examples: the coordinates written from memory, the "di" search bug, and the steps Claude couldn't do itself.
+4. **Claims your appendix contradicts.** "Planning mode" and "explorer agents" don't appear anywhere in this session's transcript. Either say they happened somewhere else (another chat, or Prism) or cut them.
+
+**Required details still blank**
+5. **Your name and section number** on page 1 are still placeholders.
+6. **The live link doesn't work yet.** It goes live once you merge [blakelevine650-wq/Vibe-Project#1](https://github.com/blakelevine650-wq/Vibe-Project/pull/1). Open it once afterwards to confirm it loads.
+
+**Worth doing if you have time**
+7. **Read the sources.** I couldn't open the full texts, so read at least the abstracts, both to quote them correctly and to check they say what you claim.
+8. **Other sources you consulted.** You mentioned GitHub and Twitter. The assignment says to list anything you consulted, but only as specific items (a particular repo or post with its author and date); "GitHub" alone doesn't count. Leaving them out is fine if you didn't rely on anything specific.
+9. **Make the "humans" section answer its own question.** It currently argues that AI beats any human. One sentence on a decision you made that changed the product would fix it, such as splitting the guess list or rejecting the first design.
+
+**Already done:** the formatting (12-point font, double spacing, 1-inch margins), all five headings, References in APA, 10 captioned screenshots (the minimum is 3), and the full appendix.
+
+When you send your final text, I'll rebuild the PDF. That also updates the appendix to include our last messages.
+
+
+---
+
+## Prompt 14 — 2026-11-16 18:53 UTC
+
+**User:**
+
+Blake Levine section 003
+
+I tried using the github cloud feature as I was running low on disk space on my computer. Also when you push and commit it saves each time which allows me to go back to a past version if I don't like the direction it is heading. On twitter I follow various vibe coders who offer their frontend skills, while I didn't use those I find them interesting as I could them for inspiration when creating this project. 
+
+https://www.producttalk.org/vibe-coding-best-practices/
+
+checked this source, showed how it boosts productivity in the workplace. A mjor thing being that the doom lioop and how the LLM can say it fixed the bug even though could still be broken. this is where styding CS could be handy brecasuye you can go fix it and see where it is not working. As someone who does not study CS, I find that utilikzing agents to test the product and keep testing to make sure that it can find the route cause through strategic prompting frameworks
+
+**Claude:**
+
+I'll put your name and section on page 1, add both paragraphs, and add the Product Talk article to the References. First I need the article's author and date for the citation.
+
+- *Tool —* **WebFetch**: https://www.producttalk.org/vibe-coding-best-practices/
+```text
+getaddrinfo ENOTFOUND www.producttalk.org. In this cloud session a host fails to resolve like this when it is outside the session's allowed network domains, or does not exist. If another host has failed the same way, stop trying more sites: carry on without them, and say in your answer that www.producttalk.org has to be allowed in the session's network settings. Fetch it again only once the user says it is allowed.
+```
+
+- *Tool —* **WebSearch**: “producttalk.org vibe coding best practices Teresa Torres doom loop”
+```text
+Web search results for query: "producttalk.org vibe coding best practices Teresa Torres doom loop"
+
+Links: [{"title":"Vibe Coding Best Practices: Avoid the Doom Loop with Planning and Code Reviews","url":"https://producttalk.org/vibe-coding-best-practices/"},{"title":"Vibe Coding Best Practices: Avoid the Doom Loop with Planning and Code Reviews","url":"https://producttalk.org/2026/04/vibe-coding-best-practices/"},{"title":"food agile thought 538 vibe coding best practices","url":"https://age-of-product.com/food-agile-thought-538-vibe-coding-best-practices/"},{"title":"15 Vibe Coding Best Practices For Building Full Stack Apps","url":"https://interviewkickstart.com/blogs/articles/vibe-coding-best-practices"},{"title":"Food for Agile Thought #509: Vibe Coding for Product Managers, Mass Intelligence, Walk Away or Dance, Disruption by GPU","url":"https://age-of-product.com/food-agile-thought-509/"},{"title":"DEV Community","url":"https://dev.to/kunal_d6a8fea2309e1571ee7/vibe-coding-best-practices-in-2026-7-techniques-that-work-and-3-that-create-tech-debt-5e62"},{"title":"vibe coding for product managers","url":"https://airfocus.com/blog/vibe-coding-for-product-managers/"},{"title":"Vibe Coding in 2026: A Practice Guide","url":"https://augmentedmind.substack.com/p/vibe-coding-in-2026-a-practice-guide"},{"title":"Best Practices","url":"https://d2sdc2xcvarl17.cloudfront.net/71d34e8e-
+```
+*(output shortened)*
+
+- *Tool —* **Bash**: Add name, section, new paragraphs and the Torres source; rebuild the PDF and push
+- *Tool —* **SendUserFile**: sent `Wolverine-Daily-Assignment.pdf` — “Updated PDF: your name and section, both new paragraphs, and the Product Talk source”

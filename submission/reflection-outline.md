@@ -118,6 +118,7 @@ Sources: **METR** notes its slowdown result may not hold for small new projects 
 
 1. Sarkar, A., & Drosos, I. (2025). *Vibe coding: Programming through conversation with artificial intelligence*. Proceedings of the 36th Annual Conference of the Psychology of Programming Interest Group (PPIG 2025). arXiv:2506.23253. https://arxiv.org/abs/2506.23253 — think-aloud study of about 8.5 hours of vibe coding sessions.
 2. Becker, J., Rush, N., Barnes, E., & Rein, D. (2025). *Measuring the impact of early-2025 AI on experienced open-source developer productivity* (arXiv:2507.09089). METR. https://arxiv.org/abs/2507.09089 — randomized trial, 16 developers, 246 tasks, 19% slower with AI.
-3. Willison, S. (2025, March 19). *Not all AI-assisted programming is vibe coding (but vibe coding rocks)*. Simon Willison's Weblog. https://simonwillison.net/2025/Mar/19/vibe-coding/
+3. Torres, T. (2026, April). *Vibe coding best practices: Avoid the doom loop with planning and code reviews*. Product Talk. https://producttalk.org/2026/04/vibe-coding-best-practices/ — added by Blake; the "doom loop" of an agent claiming a bug is fixed when it isn't.
+4. Willison, S. (2025, March 19). *Not all AI-assisted programming is vibe coding (but vibe coding rocks)*. Simon Willison's Weblog. https://simonwillison.net/2025/Mar/19/vibe-coding/
 
 **Read them before citing.** These details come from search results; Claude's network blocked arxiv.org and simonwillison.net, so it could not open the full texts. Check any quotation against the source itself.
