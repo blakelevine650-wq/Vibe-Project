@@ -499,3 +499,20 @@ _(Fill in.)_
 
 _(Fill in.)_
 
+---
+
+### Prompt 18
+
+> I planned in a separate Claude chat, update those lines
+>
+> ok change that wording then make sure it is cohesive and makes sense as a reflection then tell me if it is ready to submit
+
+### What Claude did
+
+- Fixed the four statements the transcript didn't support: planning now says it happened in a separate Claude chat; "explorer agents" now describes how Claude actually tested (playing the game in a browser and taking screenshots); the redesign paragraph now says Claude came up with the newspaper look itself; "GitHub cloud feature" is now Claude Code's cloud feature.
+- Copyedited Part 1 for flow without adding new points: merged the two Prism mentions, grouped the planning sentences, moved the Twitter sentence to the frontend paragraph, put the "humans" argument first, and corrected what /compact does. Part 1 is 834 words.
+
+### My notes
+
+_(Fill in.)_
+

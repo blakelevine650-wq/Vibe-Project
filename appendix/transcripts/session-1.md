@@ -9,7 +9,7 @@ Session 1 of Wolverine Daily, Claude Code (cloud session), 14–16 November 2026
 - Local file paths are shortened to `<repo>` and `<scratchpad>`, and personal contact details are removed.
 - Models: the session was set to claude-opus-5-5 but ran on claude-fable-5-2 from the first prompt through Prompt 8; the user switched to claude-opus-5-5 before Prompt 9.
 
-18 user prompts in total.
+19 user prompts in total.
 
 ---
 
@@ -2274,3 +2274,83 @@ I also wanted to highlight how this summer I used AI to build a working product 
 
 - *Tool —* **Bash**: Add the paragraph, refresh the appendix, rebuild the PDF and push
 - *Tool —* **SendUserFile**: sent `Wolverine-Daily-Assignment.pdf` — “Part 1 is now in the 750–1,000 word range”
+```text
+Part 1 words: 844
+pages 58
+Part 2 starts page 5
+no private email
+branch 'claude/serene-euler-9pzpky' set up to track 'origin/claude/serene-euler-9pzpky'.
+```
+
+**Claude:**
+
+Part 1 is now about 845 words, inside the 750–1,000 range. I added your Prism paragraph to "The Vibe Coding Journey," right after your first paragraph there, which also mentions Prism. Spelling and grammar are the only changes, except one word: you wrote "the part I can, which is coding," and I read it as "the part I can't." Tell me if you meant otherwise. The rebuilt PDF is pushed (58 pages).
+
+Before you submit:
+
+1. **Merge [blakelevine650-wq/Vibe-Project#1](https://github.com/blakelevine650-wq/Vibe-Project/pull/1).** The live link in Part 2 doesn't work until you do. Give it a minute or two to deploy, then open https://blakelevine650-wq.github.io/Vibe-Project/ to check.
+2. **Three statements still don't match your appendix,** and the grader can check them against it:
+   - **"The plan feature in Claude" and "planning mode":** in this session you pasted in a finished plan. If you planned in a separate Claude chat, saying so makes both accurate.
+   - **"Explorer agents":** none were used here. Claude tested the game by playing it in a scripted browser and taking screenshots.
+   - **"I told it about the Michigan Daily":** your redesign prompt only asked that it not look vibe coded. The newspaper idea was Claude's own.
+
+   Telling me how you'd like those worded is a quick change.
+3. **Read the two sources** before submitting, at least the parts you cite: [Torres (2026)](https://producttalk.org/2026/04/vibe-coding-best-practices/) and [roadmap.sh (n.d.)](https://roadmap.sh/vibe-coding/best-practices).
+
+The appendix runs through your Prism paragraph; it can't include this reply. If you send the wording changes, I'll rebuild once more and that brings the appendix up to date too.
+
+
+> *2026-11-16 19:29 UTC — automated notification (pull-request watch / scheduled check-in), not typed by the user.*
+
+- *Tool —* **ReadNotifications**: 
+- *Tool —* **github:pull_request_read**: method=get_check_runs, owner=blakelevine650-wq, repo=Vibe-Project, pullNumber=1
+```text
+{"total_count":2,"check_runs":[{"id":133553818223,"name":"deploy","status":"completed","conclusion":"skipped","html_url":"https://github.com/blakelevine650-wq/Vibe-Project/actions/runs/43939716072/job/133553818223","details_url":"https://github.com/blakelevine650-wq/Vibe-Project/actions/runs/43939716072/job/133553818223","started_at":"2026-11-16T19:28:51Z","completed_at":"2026-11-16T19:28:51Z"},{"id":133553678565,"name":"build","status":"completed","conclusion":"success","html_url":"https://github.com/blakelevine650-wq/Vibe-Project/actions/runs/43939716072/job/133553678565","details_url":"https://github.com/blakelevine650-wq/Vibe-Project/actions/runs/43939716072/job/133553678565","started_at":"2026-11-16T19:28:39Z","completed_at":"2026-11-16T19:28:50Z"}]}
+```
+
+**Claude:**
+
+The push with your Prism paragraph passed its checks on [blakelevine650-wq/Vibe-Project#1](https://github.com/blakelevine650-wq/Vibe-Project/pull/1): the build succeeded and deploy was skipped, as usual for a pull request. You can merge it whenever you're ready, which also puts the live link in Part 2 online.
+
+
+---
+
+## Prompt 19 — 2026-11-16 19:32 UTC
+
+**User:**
+
+I planned in a separate Claude chat, update those lines
+
+ok change that wording then make sure it is cohesive and makes sense as a reflection then tell me if it is ready to submit
+
+- *Tool —* **Bash**: Show the current Part 1 text and references
+```text
+# Part 1: Written Reflection
+
+## Original Vision
+
+I set out to build a daily game and brainstormed with Claude. I was inspired to do this because people like to play those short mini games like Wordle, so I wanted to create something similar, except themed for Michigan students.
+
+## The Vibe Coding Journey
+
+I used Claude, which was offering free use of Fable 5.2, the most advanced model out there. I have vibe coded products before this summer and have a live product called Prism, so I had some prior experience. For me, planning is super important, so I put Claude in planning mode to create a good idea and a phased approach to the buildout. Only once everything was planned did I let it start. Obviously I was going to run into bugs, so I used explorer agents to test the prototype and see if everything was working correctly.
+
+I also want to highlight how this summer I used AI to build a working product with my friend, called Prism (prismdata.co), and that was a really good experience. Having that background experience helped me know my plan going into building this product and made me excited about this flex assignment, since the product I currently have live and working looks pretty professionally done, and not like the AI vibe coded slop that you see online and sometimes on various companies' websites. So when building this product, I had a good plan: first start with the plan f
+```
+*(output shortened)*
+
+- *Tool —* **Bash**: Apply the wording fixes and flow edits to Part 1 and check length and citations
+```text
+Part 1 words: 834
+'explorer agents': 0
+'Michigan Daily': 1
+'planning mode': 1
+'GitHub cloud': 0
+'did not fall short': 0
+'(roadmap.sh, n.d.)': 1
+'(Torres, 2026)': 1
+```
+
+- *Tool —* **Bash**: Log the prompt, refresh the appendix, rebuild the PDF and push
+- *Tool —* **github:pull_request_read**: method=get, owner=blakelevine650-wq, repo=Vibe-Project, pullNumber=1
+- *Tool —* **SendUserFile**: sent `Wolverine-Daily-Assignment.pdf` — “Final PDF: Part 1 is 834 words; images and appendix included”
