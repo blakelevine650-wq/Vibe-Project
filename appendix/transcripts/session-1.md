@@ -9,7 +9,7 @@ Session 1 of Wolverine Daily, Claude Code (cloud session), 14–16 November 2026
 - Local file paths are shortened to `<repo>` and `<scratchpad>`, and personal contact details are removed.
 - Models: the session was set to claude-opus-5-5 but ran on claude-fable-5-2 from the first prompt through Prompt 8; the user switched to claude-opus-5-5 before Prompt 9.
 
-16 user prompts in total.
+17 user prompts in total.
 
 ---
 
@@ -2172,3 +2172,61 @@ Humans are stiill foundational because at least for me the business perspective.
 
 - *Tool —* **Bash**: Add the new paragraph, refresh the appendix, rebuild the PDF and push
 - *Tool —* **SendUserFile**: sent `Wolverine-Daily-Assignment.pdf` — “Updated PDF; Part 1 is about 570 words”
+```text
+Part 1 words: 565
+pages 54
+no private email
+branch 'claude/serene-euler-9pzpky' set up to track 'origin/claude/serene-euler-9pzpky'.
+```
+
+**Claude:**
+
+The new paragraph is in "Why Humans Are Still Foundational," with spelling and grammar fixed only, and the rebuilt PDF is pushed. Part 1 is now about 565 words, so you need about 185 more to reach 750.
+
+This section now makes its case. Its next step is an example: one moment from this build where your scoping or business judgment changed what Claude made. Splitting the guess list from the answers, or rejecting the first design, would both work.
+
+The other 140 or so words would help most in "What LLMs Do Well," which is three short sentences right now. One specific thing that impressed you would fill it out, such as how fast it built the app or something it caught. The first sentence of "Where the LLM Fell Short" ("did not fall short in any aspect") is also still there.
+
+Send the next part and I'll rebuild. Merge the pull request before you submit so the live link works.
+
+
+> *2026-11-16 19:23 UTC — automated notification (pull-request watch / scheduled check-in), not typed by the user.*
+
+- *Tool —* **ReadNotifications**: 
+- *Tool —* **github:pull_request_read**: method=get_check_runs, owner=blakelevine650-wq, repo=Vibe-Project, pullNumber=1
+```text
+{"total_count":2,"check_runs":[{"id":133550202183,"name":"deploy","status":"completed","conclusion":"skipped","html_url":"https://github.com/blakelevine650-wq/Vibe-Project/actions/runs/43938682306/job/133550202183","details_url":"https://github.com/blakelevine650-wq/Vibe-Project/actions/runs/43938682306/job/133550202183","started_at":"2026-11-16T19:22:54Z","completed_at":"2026-11-16T19:22:54Z"},{"id":133550015049,"name":"build","status":"completed","conclusion":"success","html_url":"https://github.com/blakelevine650-wq/Vibe-Project/actions/runs/43938682306/job/133550015049","details_url":"https://github.com/blakelevine650-wq/Vibe-Project/actions/runs/43938682306/job/133550015049","started_at":"2026-11-16T19:22:38Z","completed_at":"2026-11-16T19:22:53Z"}]}
+```
+
+**Claude:**
+
+The push with your paragraph on human judgment passed its checks on [blakelevine650-wq/Vibe-Project#1](https://github.com/blakelevine650-wq/Vibe-Project/pull/1): the build succeeded, and deploy was skipped as usual for a pull request. Part 1 is at about 565 words; send the remaining ~185 whenever they're ready.
+
+
+---
+
+## Prompt 17 — 2026-11-16 19:24 UTC
+
+**User:**
+
+remove the "did not fall short" sentence,
+
+Also here is other 140 words or so 
+
+Some other things that impressed me about what the LLM did well was the speed of it as well as the output. At first, when I built it, it was very vibe codey and had rounded buttons, and I wanted more of a pristine article-looking look. So I told about the Michigan Daily and how to make it sort of look newspapery, since it was inspired by the Wolverine Daily. Sort of a mini game inside the Michigan Daily was my thought process. So being able to create something that I wouldn't be able to myself, as I lack the coding skills, but just being able to articulate and translate my intent of my goals and constrain the AI to that particular vision to allow it to create something working and something that allows it to be visually appealing without looking too sloppy per se.
+
+- *Tool —* **Bash**: Remove the sentence, add the new paragraph, count words, and check the transcript for the newspaper idea's origin
+```text
+Part 1 words: 684
+447:use top tier frontend design skills in order to redesign the frontend to make sure it elite, polished, and of the highest quality. Should not look like every other vibe coded slop
+461:Redesigning around a student-newspaper concept (masthead, sections, box score); fonts are installed and I'm now rewriting the screens and stylesheet.
+463:- *Tool —* **Bash**: Rewrite all screens and the stylesheet in the newspaper design; test and build
+572:The frontend is redesigned around one idea: Wolverine Daily is a student newspaper. It's committed and pushed to `claude/serene-euler-9pzpky`. I checked every screen by screenshot on an iPhone, a 
+587:- **The newspaper copy** — "Today's edition", "Box score", and score verdicts like "Front-page material." are my wording.
+600:Start Phase 4 (stats, streaks, practice mode, how-to library), designed to match the newspaper style. Bring back the streak on the results screen. Commit and push when done.
+1138:{"number":1,"title":"Wolverine Daily: game, content, and GitHub Pages deployment","body":"## Summary\n\nBuilds Wolverine Daily, an unofficial daily campus puzzle for University of Michigan studen
+1167:{"number":1,"title":"Wolverine Daily: game, content, and GitHub Pages deployment","body":"## Summary\n\nBuilds Wolverine Daily, an unofficial daily campus puzzle for University of Michigan studen
+```
+
+- *Tool —* **Bash**: Refresh the appendix, rebuild the PDF and push
+- *Tool —* **SendUserFile**: sent `Wolverine-Daily-Assignment.pdf` — “Updated PDF; Part 1 is about 685 words”

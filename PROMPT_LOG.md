@@ -470,3 +470,18 @@ _(Fill in.)_
 
 _(Fill in.)_
 
+---
+
+### Prompt 16
+
+> _[Asked to remove the "did not fall short" sentence, and sent a paragraph for "What LLMs do well". Reproduced word for word in the appendix transcript.]_
+
+### What Claude did
+
+- Removed the sentence, added the paragraph with spelling and grammar fixed, and rebuilt the PDF.
+- Pointed out that the transcript doesn't support the paragraph's claim that I told Claude about the Michigan Daily: my redesign prompt (Prompt 4) asked only that it not look vibe coded, and Claude chose the newspaper concept.
+
+### My notes
+
+_(Fill in.)_
+
