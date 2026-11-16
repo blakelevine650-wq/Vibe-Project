@@ -516,3 +516,17 @@ _(Fill in.)_
 
 _(Fill in.)_
 
+---
+
+### Prompt 19
+
+> One bug that owsa run into was the "di" search as "building" has di in it and that would cause the bug. The LLM noticed is, brought it to my attention and then I directed it to fix it
+
+### What Claude did
+
+- Added it to "Where the LLM Fell Short", after the frontend paragraph, with spelling and grammar fixed, and rebuilt the PDF.
+
+### My notes
+
+_(Fill in.)_
+

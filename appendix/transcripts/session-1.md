@@ -9,7 +9,7 @@ Session 1 of Wolverine Daily, Claude Code (cloud session), 14–16 November 2026
 - Local file paths are shortened to `<repo>` and `<scratchpad>`, and personal contact details are removed.
 - Models: the session was set to claude-opus-5-5 but ran on claude-fable-5-2 from the first prompt through Prompt 8; the user switched to claude-opus-5-5 before Prompt 9.
 
-19 user prompts in total.
+20 user prompts in total.
 
 ---
 
@@ -2354,3 +2354,77 @@ Part 1 words: 834
 - *Tool —* **Bash**: Log the prompt, refresh the appendix, rebuild the PDF and push
 - *Tool —* **github:pull_request_read**: method=get, owner=blakelevine650-wq, repo=Vibe-Project, pullNumber=1
 - *Tool —* **SendUserFile**: sent `Wolverine-Daily-Assignment.pdf` — “Final PDF: Part 1 is 834 words; images and appendix included”
+```text
+pages 60
+Blake Levine
+SI 110 — Section 003
+16 November 2026
+Wolverine Daily: A Vibe Coding Reflection
+Part 1: Written Reflection
+Original Vision
+I set out to build a daily game and brainstormed with Claude. I 
+no private email
+branch 'claude/serene-euler-9pzpky' set up to track 'origin/claude/serene-euler-9pzpky'.
+```
+
+```text
+{"number":1,"title":"Wolverine Daily: game, content, and GitHub Pages deployment","body":"## Summary\n\nBuilds Wolverine Daily, an unofficial daily campus puzzle for University of Michigan students, from an empty repo through Phase 6 of `PLAN.md`.\n\n- **Daily engine** — the puzzle is picked from the America/Detroit calendar date, so everyone gets the same one; each content pool is used up before anything repeats.\n- **Three rounds** — Campus Clue (5 guesses, distance and compass feedback, a new clue per miss), Quick Three (one question per category), Tip of the Day (how-to card plus a one-question check).\n- **Results** — score out of 200, box score, streak, countdown to the next puzzle, emoji share text with the game link.\n- **Saved in the browser** — finished games, in-progress play (a refresh can't be used to retry), stats and streaks. No accounts, no backend.\n- **Practice mode and how-to library** — practice never touches stats; today's tip is filed in the library only after today's puzzle is finished.\n- **Design** — styled as a student newspaper, with a dark \"night edition\". No official logos.\n- **Content** — 30 answer places, 57 guess-only places, 30 trivia questions, 15 tips.\n- **Deployment** — `.github/workflows/deploy.yml` runs tests and build on pull requests, and publishes to GitHub Pages on push to `main`.\n- **Assignment docs** — `PLAN.md`, `PROMPT_LOG.md`,
+```
+*(output shortened)*
+
+**Claude:**
+
+Part 1 is fixed, edited for flow and 834 words. The PDF is rebuilt and pushed (60 pages). It isn't quite ready to submit yet, though: the live link in Part 2 won't work until you merge the pull request.
+
+**What I changed, so you can check it's still your voice:**
+- **Planning:** now says you used planning mode in a separate Claude chat, in both places.
+- **Testing:** "explorer agents" now reads "Claude tested the prototype by playing it in a browser and taking screenshots of each screen."
+- **Redesign:** you asked it not to look like vibe coded slop, Claude came up with the newspaper look on its own, and that fit your idea of a mini game inside the Michigan Daily.
+- **Cloud:** "GitHub cloud feature" is now "Claude Code's cloud feature."
+- **Flow edits, no new points:**
+  - The two Prism mentions are merged into one paragraph, and the planning sentences are grouped together.
+  - The Twitter sentence moved next to your frontend point.
+  - "Where the LLM Fell Short" now opens with "One place the LLM fell short is the frontend…"
+  - The humans section now leads with its argument. The "better and faster than any human" sentence ends with "…but it still needs a human to direct it," so it no longer argues against the section.
+  - /compact is described as summarizing a long session, which matches the roadmap.sh source.
+
+**Checked against the requirements:**
+- **Length:** 834 words (750–1,000 required).
+- **Content:** all five sections.
+- **Sources:** two, each cited in the text and listed in APA.
+- **Formatting:** 12-point font, double-spaced, 1-inch margins, with your name and section on page 1.
+- **Images:** 10 annotated screenshots (3 required).
+- **Appendix:** the full transcript, which ends at your last message.
+
+**Before you submit:**
+1. **Merge [blakelevine650-wq/Vibe-Project#1](https://github.com/blakelevine650-wq/Vibe-Project/pull/1)** (it's still open). Wait a minute or two, then open https://blakelevine650-wq.github.io/Vibe-Project/ to confirm it loads.
+2. **Upload** `submission/Wolverine-Daily-Assignment.pdf` to Canvas by 11:59 pm.
+
+**What would still cost points, so you know (none of it blocks submitting):**
+- **"Where the LLM Fell Short" is general.** The doom loop and the frontend are real points, but neither names a failure from this build. One sentence on the "di" search bug or the 34 coordinates more than 100 ft off would make it specific, which the top grade bands reward.
+- **One Torres claim is unchecked.** I couldn't confirm that her article talks about workplace productivity; its title is about avoiding the doom loop with planning and code reviews. Skim it before submitting.
+
+
+> *2026-11-16 19:34 UTC — automated notification (pull-request watch / scheduled check-in), not typed by the user.*
+
+- *Tool —* **ReadNotifications**: 
+- *Tool —* **github:pull_request_read**: method=get_check_runs, owner=blakelevine650-wq, repo=Vibe-Project, pullNumber=1
+```text
+{"total_count":2,"check_runs":[{"id":133557191701,"name":"deploy","status":"completed","conclusion":"skipped","html_url":"https://github.com/blakelevine650-wq/Vibe-Project/actions/runs/43940675670/job/133557191701","details_url":"https://github.com/blakelevine650-wq/Vibe-Project/actions/runs/43940675670/job/133557191701","started_at":"2026-11-16T19:34:22Z","completed_at":"2026-11-16T19:34:22Z"},{"id":133557042312,"name":"build","status":"completed","conclusion":"success","html_url":"https://github.com/blakelevine650-wq/Vibe-Project/actions/runs/43940675670/job/133557042312","details_url":"https://github.com/blakelevine650-wq/Vibe-Project/actions/runs/43940675670/job/133557042312","started_at":"2026-11-16T19:34:09Z","completed_at":"2026-11-16T19:34:22Z"}]}
+```
+
+**Claude:**
+
+The final push, with the edited Part 1, passed its checks on [blakelevine650-wq/Vibe-Project#1](https://github.com/blakelevine650-wq/Vibe-Project/pull/1). The build succeeded, and deploy was skipped, which is normal for a pull request. The only step left before you submit is to merge it; after that, wait a minute or two and check that https://blakelevine650-wq.github.io/Vibe-Project/ loads.
+
+
+---
+
+## Prompt 20 — 2026-11-16 19:36 UTC
+
+**User:**
+
+One bug that owsa run into was the "di" search as "building" has di in it and that would cause the bug. The LLM noticed is, brought it to my attention and then I directed it to fix it
+
+- *Tool —* **Bash**: Add the bug paragraph, refresh the appendix, rebuild the PDF and push
+- *Tool —* **SendUserFile**: sent `Wolverine-Daily-Assignment.pdf` — “Final PDF with your search-bug example; Part 1 is about 870 words”
