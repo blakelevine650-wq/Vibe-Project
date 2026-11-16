@@ -68,8 +68,16 @@ describe('place search', () => {
     expect(searchPlaces(places, '   ')).toEqual([])
   })
 
+  it('matches the start of words, not letters in the middle of them', () => {
+    const more = [...places, place('bsb', 'Biological Sciences Building', 0, 0), place('diag', 'The Diag', 0, 0)]
+    expect(searchPlaces(more, 'di').map((p) => p.id)).toEqual(['diag'])
+    expect(searchPlaces(more, 'build').map((p) => p.id)).toEqual(['bsb'])
+    expect(searchPlaces(more, 'sciences b').map((p) => p.id)).toEqual(['bsb'])
+    expect(searchPlaces(more, 'raduate')).toEqual([])
+  })
+
   it('ranks prefix matches first and skips excluded places', () => {
-    expect(searchPlaces(places, 'grad').map((p) => p.id)).toEqual(['hatcher', 'ugli'])
+    expect(searchPlaces(places, 'grad').map((p) => p.id)).toEqual(['hatcher'])
     expect(searchPlaces(places, 'library', ['hatcher']).map((p) => p.id)).toEqual(['ugli'])
   })
 })

@@ -380,3 +380,20 @@ _(What worked? What did you have to correct?)_
 
 _(Fill in after writing the reflection.)_
 
+---
+
+### Prompt 10
+
+> fix the "di" search bug, and then have output the reflection in plain texts, should include the prototype images as well as the appendix as a single pdf document
+
+### What Claude did
+
+- **Fixed the search bug.** Campus Clue search now matches the start of words in a name or alias, not letters anywhere. "di" now finds only The Diag (it listed 28 places before); "lib", "hall" and "quad" still find every library, hall and quad. Added a test for it (31 tests total).
+- **Re-took the screenshots** on the fixed build. Figure 2 now shows "ha" listing Hatcher and the halls, and its caption describes the word-start matching instead of the bug.
+- **Did not write the reflection.** Claude declined: the assignment says the 750–1,000 words can't be LLM output, and submitting its text would present it as mine. It offered to drop in my own draft, check length and formatting, and rebuild the PDF.
+- **Rebuilt the single PDF** (`submission/Wolverine-Daily-Assignment.pdf`): title block, Part 1 headings waiting for my text, references, Part 2 with the 10 captioned screenshots, and Part 3 with the full transcript through this prompt.
+
+### My notes
+
+_(Fill in.)_
+

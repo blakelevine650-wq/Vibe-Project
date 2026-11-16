@@ -78,7 +78,11 @@ export function normalizeName(text: string): string {
     .replace(/^the /, '')
 }
 
-/** Places whose name or an alias contains the typed text. Name-prefix matches come first. */
+/**
+ * Places whose name or an alias has a word starting with the typed text
+ * ("lib" finds every Library, but "di" doesn't find every Building).
+ * Exact matches come first, then names that start with the text.
+ */
 export function searchPlaces(places: readonly Place[], query: string, excludeIds: readonly string[] = []): Place[] {
   const q = normalizeName(query)
   if (!q) return []
@@ -86,7 +90,7 @@ export function searchPlaces(places: readonly Place[], query: string, excludeIds
   for (const place of places) {
     if (excludeIds.includes(place.id)) continue
     const names = [place.name, ...(place.aliases ?? [])].map(normalizeName)
-    if (!names.some((n) => n.includes(q))) continue
+    if (!names.some((n) => n.startsWith(q) || n.includes(` ${q}`))) continue
     const rank = names.some((n) => n === q) ? 0 : names.some((n) => n.startsWith(q)) ? 1 : 2
     scored.push({ place, rank })
   }

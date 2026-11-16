@@ -9,7 +9,7 @@ Session 1 of Wolverine Daily, Claude Code (cloud session), 14–16 November 2026
 - Local file paths are shortened to `<repo>` and `<scratchpad>`, and personal contact details are removed.
 - Models: the session was set to claude-opus-5-5 but ran on claude-fable-5-2 from the first prompt through Prompt 8; the user switched to claude-opus-5-5 before Prompt 9.
 
-9 user prompts in total.
+10 user prompts in total.
 
 ---
 
@@ -1673,3 +1673,127 @@ pages 36
   *→ screenshot viewed by the model*
 
 - *Tool —* **Bash**: Log the prompt, refresh the transcript and document, and check for private details
+```text
+9 prompts; 98155 chars; 134 tool actions
+saved submission/Wolverine-Daily-Assignment.docx tables 2
+pdf pages 41
+no private email found
+0
+      Tests  30 passed (30)
+ M PROMPT_LOG.md
+ M README.md
+ D appendix/transcripts/.gitkeep
+?? appendix/transcripts/session-1.md
+?? submission/
+```
+
+- *Tool —* **Bash**: Commit and push the write-up materials
+- *Tool —* **SendUserFile**: sent `Wolverine-Daily-Assignment.docx`, `reflection-outline.md`, `Wolverine-Daily-Assignment-preview.pdf` — “Submission document to write in, the evidence outline, and a PDF preview of the current layout”
+```text
+25M	submission
+branch 'claude/serene-euler-9pzpky' set up to track 'origin/claude/serene-euler-9pzpky'.
+## claude/serene-euler-9pzpky...origin/claude/serene-euler-9pzpky
+```
+
+**Claude:**
+
+I've prepared everything for the assignment except Part 1, the 750–1,000-word reflection. The brief says those words can't be LLM output, and your own plan says "you write it." Everything is committed and pushed to `claude/serene-euler-9pzpky`.
+
+**What's ready, in `submission/`:**
+- **`Wolverine-Daily-Assignment.docx`** is the document you'll submit. It has your title block (name and section left blank), Part 1 headings to write under, the references, Part 2, and Part 3. Part 1 and the references are already set in 12-point Times New Roman, double-spaced, with 1-inch margins.
+- **Part 2:** the live and repository links at the top, then 10 screenshots with captions saying what each part of the app does. I played three real days of the game with the browser clock set to 14, 15 and 16 November, so the streak and stats come from actual play; the document says so. The captions are my drafts, so edit them as you like.
+- **Part 3:** the full session log (also in `appendix/transcripts/session-1.md`). Every prompt and reply is word for word; tool actions are listed one per line with short output excerpts. Your email address is removed.
+- **`reflection-outline.md`** is evidence to write from, not prose. For each section it gives concrete moments with prompt numbers, questions only you can answer, and where each source fits. It also has a table of numbers to cite, such as one hour from empty repo to deployable app, no lines written by you, and 34 of 62 memory-written coordinates off by more than 100 ft.
+
+**Sources** (two required; I included a third):
+- [Sarkar & Drosos (2025)](https://arxiv.org/abs/2506.23253): a peer-reviewed study of vibe coding sessions. Its main point is that vibe coding moves expertise toward judging the AI's output rather than removing it.
+- [Becker et al. (2025, METR)](https://arxiv.org/abs/2507.09089): a randomized trial in which experienced developers were 19% slower with AI while believing they were faster.
+- [Willison (2025)](https://simonwillison.net/2025/Mar/19/vibe-coding/): defines vibe coding as not reviewing the code the AI writes.
+
+The network here blocked those sites, so I worked from search results and couldn't open the full texts. Read them before you quote anything.
+
+**Before 11:59 pm tonight:**
+1. Write Part 1 in the document and fill in your name and section.
+2. Merge [blakelevine650-wq/Vibe-Project#1](https://github.com/blakelevine650-wq/Vibe-Project/pull/1). The live link in Part 2 won't work until you do, so open it once to check.
+3. If you've checked any of the content, put the numbers in the reflection: even "I checked 40 rows and 6 were wrong" is your strongest evidence.
+4. Export the document as a PDF (File → Save as PDF, or upload to Google Docs and download as PDF).
+
+The appendix ends at your assignment prompt and doesn't include this reply. If your instructor wants the official export, copy the conversation from claude.ai instead. The preview PDF is 41 pages, mostly the appendix.
+
+I found one bug while taking the screenshots: typing "di" in the Campus Clue box lists 28 places, because "Building" contains "di". I left it unfixed so the screenshots match the app, and Figure 2's caption mentions it. I can fix it after you submit.
+
+
+> *2026-11-16 18:24 UTC — automated notification (pull-request watch / scheduled check-in), not typed by the user.*
+
+- *Tool —* **ReadNotifications**: 
+- *Tool —* **github:pull_request_read**: method=get_check_runs, owner=blakelevine650-wq, repo=Vibe-Project, pullNumber=1
+```text
+{"total_count":2,"check_runs":[{"id":133514249459,"name":"deploy","status":"completed","conclusion":"skipped","html_url":"https://github.com/blakelevine650-wq/Vibe-Project/actions/runs/43928444537/job/133514249459","details_url":"https://github.com/blakelevine650-wq/Vibe-Project/actions/runs/43928444537/job/133514249459","started_at":"2026-11-16T18:24:35Z","completed_at":"2026-11-16T18:24:35Z"},{"id":133514083825,"name":"build","status":"completed","conclusion":"success","html_url":"https://github.com/blakelevine650-wq/Vibe-Project/actions/runs/43928444537/job/133514083825","details_url":"https://github.com/blakelevine650-wq/Vibe-Project/actions/runs/43928444537/job/133514083825","started_at":"2026-11-16T18:24:21Z","completed_at":"2026-11-16T18:24:35Z"}]}
+```
+
+**Claude:**
+
+The checks on [blakelevine650-wq/Vibe-Project#1](https://github.com/blakelevine650-wq/Vibe-Project/pull/1) passed again after I pushed the write-up materials. Tests and build succeeded, and deploy was skipped as it always is on a pull request. You can merge whenever you like, which is what makes the live link in Part 2 work.
+
+
+---
+
+## Prompt 10 — 2026-11-16 18:25 UTC
+
+**User:**
+
+fix the "di" search bug, and then have output the reflection in plain texts, should include the prototype images as well as the appendix as a single pdf document
+
+**Claude:**
+
+I'll fix the search bug and rebuild the PDF with the prototype images and the full appendix. I won't write the reflection itself. The assignment says those 750–1,000 words can't be LLM output, and submitting text I wrote would present my work as yours. Send me your draft, even rough, and I'll put it in, check the word count and formatting, and regenerate the PDF in a couple of minutes.
+
+The fix first:
+
+- *Tool —* **Bash**: Find the search matching code and its tests
+```text
+## claude/serene-euler-9pzpky...origin/claude/serene-euler-9pzpky
+81:/** Places whose name or an alias contains the typed text. Name-prefix matches come first. */
+89:    if (!names.some((n) => n.includes(q))) continue
+57:    place('ugli', 'Shapiro Undergraduate Library', 0, 0, ['UGLi']),
+66:    expect(searchPlaces(places, 'ENDO').map((p) => p.id)).toEqual(['cube'])
+67:    expect(searchPlaces(places, 'ugli').map((p) => p.id)).toEqual(['ugli'])
+72:    expect(searchPlaces(places, 'grad').map((p) => p.id)).toEqual(['hatcher', 'ugli'])
+73:    expect(searchPlaces(places, 'library', ['hatcher']).map((p) => p.id)).toEqual(['ugli'])
+```
+
+- *Tool —* **Bash**: Match search text at word starts, update tests, and check real queries against the content
+```text
+Tests  31 passed (31)
+'di': 1 ['The Diag']
+'ha': 16 ['Hatcher Graduate Library', 'Angell Hall', 'West Hall', 'Mosher-Jordan Hall', 'Bursley Hall', 'East Hall', 'Weill Hall', 'Couzens Hall']
+'lib': 4 ['Hatcher Graduate Library', 'Shapiro Undergraduate Library', 'Clements Library', 'Taubman Health Sciences Library']
+'hall': 15 ['Angell Hall', 'West Hall', 'Mosher-Jordan Hall', 'Bursley Hall', 'East Hall', 'Weill Hall', 'Couzens Hall', 'Alice Lloyd Hall']
+'quad': 5 ['Law Quad', 'South Quad', 'East Quad', 'West Quad', 'North Quad']
+'mojo': 1 ['Mosher-Jordan Hall']
+'ugli': 1 ['Shapiro Undergraduate Library']
+'big house': 1 ['Michigan Stadium']
+'arb': 1 ['Nichols Arboretum']
+```
+
+- *Tool —* **Bash**: Rebuild the app, re-take the screenshots on the fixed search, and update Figure 2's caption
+- *Tool —* **Read**: `<repo>/submission/images/02-clue-guessing.png`
+```text
+✓ built in 205ms
+1
+share: "Wolverine Daily #3 — 135/200\n📍 ⬛⬛🟨\n❓ 🟩🟥🟩\n💡 🟩\nhttps://blakelevine650-wq.github.io/Vibe-Project/"
+stats: PLAYED 3 WIN % 100 CURRENT STREAK 3 BEST STREAK 3
+library: [ 'Canvas\n2', 'Wolverine Access\n1' ]
+errors: []
+(1170, 3489)
+```
+
+  *→ screenshot viewed by the model*
+
+*[A screenshot was returned to the model here.]*
+
+**Claude:**
+
+Figure 2 now shows the fixed search. Logging the prompt, refreshing the appendix, and rebuilding the document and PDF:
+
+- *Tool —* **Bash**: Log the prompt, refresh the transcript, rebuild the document and PDF, and run checks
