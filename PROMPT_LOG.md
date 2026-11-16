@@ -352,3 +352,31 @@ _(How many items were wrong? Which kinds of errors? How long did checking take c
 
 _(What worked? What did you have to correct?)_
 
+---
+
+## Session 1 (continued) — Phase 7 prep (the assignment write-up)
+
+- **Date:** 2026-11-16
+- **Tool:** Claude Code (web/desktop)
+- **Model:** claude-opus-5-5 (switched with `/model` before this prompt)
+
+### Prompt 9
+
+> ok now lets do the assignment
+>
+> _[The full assignment brief was pasted below this line: overview, learning goals, instructions, report structure (Part 1 reflection, Part 2 prototype showcase, Part 3 appendix), submission and grading. It is reproduced in full in the appendix transcript.]_
+
+### What Claude did
+
+- **Did not write the reflection.** The brief says the 750–1,000 words can't be LLM prompts or outputs, and PLAN.md's Phase 7 says "you write it", so Claude prepared everything around it instead.
+- **Sources:** found and checked three (two required): Sarkar & Drosos (2025), a peer-reviewed think-aloud study of vibe coding; Becker et al. (2025, METR), a randomized trial on AI and developer speed; and Willison (2025), an industry blog post defining vibe coding. Formatted them in APA 7. The session's network blocked arxiv.org and simonwillison.net, so details come from search results; the full texts still need reading before quoting.
+- **Outline** (`submission/reflection-outline.md`): for each of the five required sections, the concrete evidence from the build (with prompt numbers), questions only I can answer, and where each source fits. Plus a table of hard numbers to cite.
+- **Screenshots:** played three real days of the game in a phone-sized browser, with the browser clock set to 14, 15 and 16 Nov, against the production build at its GitHub Pages address. 10 cropped screenshots with draft captions are in `submission/images/`.
+- **Appendix:** rendered the full session log as `appendix/transcripts/session-1.md`: every prompt and reply word for word, every tool action on one line with a short output excerpt, private details removed.
+- **Submission document** (`submission/Wolverine-Daily-Assignment.docx`): title block placeholders, Part 1 headings to write under (12 pt Times New Roman, double-spaced, 1-inch margins), References, Part 2 with links and the 10 captioned figures, Part 3 with the transcript.
+- **Found while taking screenshots:** typing "di" in the Campus Clue box lists 28 places, because search matches letters anywhere in a name ("Building" contains "di"). Left unfixed so the screenshots and captions stay accurate; noted in Figure 2.
+
+### My notes
+
+_(Fill in after writing the reflection.)_
+
