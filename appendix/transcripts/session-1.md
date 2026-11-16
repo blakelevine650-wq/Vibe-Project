@@ -9,7 +9,7 @@ Session 1 of Wolverine Daily, Claude Code (cloud session), 14–16 November 2026
 - Local file paths are shortened to `<repo>` and `<scratchpad>`, and personal contact details are removed.
 - Models: the session was set to claude-opus-5-5 but ran on claude-fable-5-2 from the first prompt through Prompt 8; the user switched to claude-opus-5-5 before Prompt 9.
 
-14 user prompts in total.
+15 user prompts in total.
 
 ---
 
@@ -2053,3 +2053,70 @@ Links: [{"title":"Vibe Coding Best Practices: Avoid the Doom Loop with Planning 
 
 - *Tool —* **Bash**: Add name, section, new paragraphs and the Torres source; rebuild the PDF and push
 - *Tool —* **SendUserFile**: sent `Wolverine-Daily-Assignment.pdf` — “Updated PDF: your name and section, both new paragraphs, and the Product Talk source”
+```text
+Part 1 words: 461
+pages 51
+Blake Levine
+SI 110 — Section 003
+16 November 2026
+Wolverine Daily: A Vibe Coding Reflection
+Part 1: Written Reflection
+
+no private email
+branch 'claude/serene-euler-9pzpky' set up to track 'origin/claude/serene-euler-9pzpky'.
+```
+
+**Claude:**
+
+Your name and section are on page 1, both paragraphs are in (spelling and grammar fixes only), and the Product Talk article is in the References with an in-text citation (Torres, 2026). The PDF is rebuilt and pushed. Part 1 is now about 460 words, so you need roughly 290 more to reach 750.
+
+Things to fix as you write the rest:
+
+- **Your new paragraph contradicts your opening line.** "Where the LLM Fell Short" still begins "did not fall short in any aspect," and then describes the doom loop. Cut or soften that first sentence.
+- **Check what Torres actually argues.** From the search results, the article is about avoiding the doom loop by planning first and having a separate agent review the work. It doesn't seem to be about workplace productivity. I couldn't open the full page (the network blocks it), so read it yourself. Her two recommendations match how you worked, which is a strong connection to draw.
+- **Three references are never cited.** Sarkar & Drosos, Becker et al. and Willison are listed but not mentioned in the text, and APA lists only works you cite. Cite each one, or tell me to remove the ones you don't use.
+- **"GitHub cloud feature"** is probably not the right name. This session ran in Claude Code's cloud sessions (claude.ai/code), which saved each commit to GitHub. "Claude Code's cloud version" would be accurate.
+- **Twitter vibe coders** are fine to mention as experience. Since you didn't use specific posts, they don't need to be in the References.
+
+Still to do: merge [blakelevine650-wq/Vibe-Project#1](https://github.com/blakelevine650-wq/Vibe-Project/pull/1) so the live link works. Send me your next additions and I'll rebuild the PDF; that also brings the appendix up to date with our latest messages.
+
+
+> *2026-11-16 18:55 UTC — automated notification (pull-request watch / scheduled check-in), not typed by the user.*
+
+- *Tool —* **ReadNotifications**: 
+- *Tool —* **github:pull_request_read**: method=get_check_runs, owner=blakelevine650-wq, repo=Vibe-Project, pullNumber=1
+```text
+{"total_count":2,"check_runs":[{"id":133532983345,"name":"deploy","status":"completed","conclusion":"skipped","html_url":"https://github.com/blakelevine650-wq/Vibe-Project/actions/runs/43933758591/job/133532983345","details_url":"https://github.com/blakelevine650-wq/Vibe-Project/actions/runs/43933758591/job/133532983345","started_at":"2026-11-16T18:54:58Z","completed_at":"2026-11-16T18:54:57Z"},{"id":133532773507,"name":"build","status":"completed","conclusion":"success","html_url":"https://github.com/blakelevine650-wq/Vibe-Project/actions/runs/43933758591/job/133532773507","details_url":"https://github.com/blakelevine650-wq/Vibe-Project/actions/runs/43933758591/job/133532773507","started_at":"2026-11-16T18:54:38Z","completed_at":"2026-11-16T18:54:57Z"}]}
+```
+
+**Claude:**
+
+The latest push, with your name, the new paragraphs and the Torres source, passed its checks on [blakelevine650-wq/Vibe-Project#1](https://github.com/blakelevine650-wq/Vibe-Project/pull/1). The build succeeded, and deploy was skipped as usual for a pull request. It's still ready to merge; send your next additions whenever they're ready.
+
+
+---
+
+## Prompt 15 — 2026-11-16 19:05 UTC
+
+**User:**
+
+remove the references I didn't cite
+
+heres the next reference https://roadmap.sh/vibe-coding/best-practices
+
+I read about the /compact feature which I knew about which makes the AI not have to read thorugh the whole code and compacts it essentially. Context bleed is mentioned and that can eat up the context window. THis helps the LLM keep focused on the task at hand
+
+- *Tool —* **WebSearch**: “roadmap.sh vibe coding best practices context bleed compact”
+```text
+Web search results for query: "roadmap.sh vibe coding best practices context bleed compact"
+
+Links: [{"title":"Vibe Coding Best Practices: How To Get Consistent Results","url":"https://roadmap.sh/vibe-coding/best-practices"},{"title":"vibe coding best practices","url":"https://base44.com/guides/vibe-coding-best-practices"},{"title":"The Complete Guide to Vibe Coding Best Practices","url":"https://codervibez.onrender.com/resources/vibe-coding-best-practices"},{"title":"Vibe Coding Best Practices: 5 Claude Code Habits for Better Agentic Coding","url":"https://nanonets.com/blog/vibe-coding-best-practices-claude-code/"},{"title":"DEV Community","url":"https://dev.to/gjoranv/i-dont-start-with-a-plan-heres-what-i-do-first-5and"},{"title":"DEV Community","url":"https://dev.to/kunal_d6a8fea2309e1571ee7/vibe-coding-best-practices-in-2026-7-techniques-that-work-and-3-that-create-tech-debt-5e62"},{"title":"Vibe Coding Best Practices","url":"https://whatisvibecode.pages.dev/best-practices"},{"title":"How to Vibe Code: A Developer's Playbook","url":"https://learn.mistral.ai/home/blogs/how-to-vibe-code-a-developers-playbook-2026-04-15"},{"title":"vibe coding","url":"https://lib.findy.co.jp/ai/vibe-coding"},{"title":"How to Vibe Code: A Developer's Playbook","url":"https://learn.mistral.ai/public/blogs/how-to-vibe-code-a-developers-playbook-2026-04-15"},{"title":"Context Engineering: The Next
+```
+*(output shortened)*
+
+**Claude:**
+
+Found it: roadmap.sh's [*Vibe Coding Best Practices: How To Get Consistent Results*](https://roadmap.sh/vibe-coding/best-practices). It has no date, so APA uses "n.d." Updating the document:
+
+- *Tool —* **Bash**: Trim uncited references, add the roadmap.sh source and paragraph, rebuild the PDF and push
+- *Tool —* **SendUserFile**: sent `Wolverine-Daily-Assignment.pdf` — “References now match your citations; Part 1 is about 525 words”

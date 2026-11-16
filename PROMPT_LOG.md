@@ -441,3 +441,18 @@ _(Fill in.)_
 
 _(Fill in.)_
 
+---
+
+### Prompt 14
+
+> _[Asked to remove the references I didn't cite, and sent a new source (roadmap.sh, "Vibe coding best practices") with a paragraph about /compact and context bleed. Reproduced word for word in the appendix transcript.]_
+
+### What Claude did
+
+- Removed Sarkar & Drosos, Becker et al. and Willison from the References, since Part 1 doesn't cite them.
+- Added my paragraph to "The Vibe Coding Journey" with an in-text citation, and added roadmap.sh (n.d.) to the References. The References now hold the two sources Part 1 cites.
+
+### My notes
+
+_(Fill in.)_
+
