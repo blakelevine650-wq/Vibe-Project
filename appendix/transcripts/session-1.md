@@ -9,7 +9,7 @@ Session 1 of Wolverine Daily, Claude Code (cloud session), 14–16 November 2026
 - Local file paths are shortened to `<repo>` and `<scratchpad>`, and personal contact details are removed.
 - Models: the session was set to claude-opus-5-5 but ran on claude-fable-5-2 from the first prompt through Prompt 8; the user switched to claude-opus-5-5 before Prompt 9.
 
-17 user prompts in total.
+18 user prompts in total.
 
 ---
 
@@ -2230,3 +2230,47 @@ Part 1 words: 684
 
 - *Tool —* **Bash**: Refresh the appendix, rebuild the PDF and push
 - *Tool —* **SendUserFile**: sent `Wolverine-Daily-Assignment.pdf` — “Updated PDF; Part 1 is about 685 words”
+```text
+pages 56
+no private email
+branch 'claude/serene-euler-9pzpky' set up to track 'origin/claude/serene-euler-9pzpky'.
+```
+
+**Claude:**
+
+The "did not fall short" sentence is gone, and your paragraph is in "What LLMs Do Well," with spelling and grammar fixes only. The PDF is rebuilt and pushed. Part 1 is now about 685 words, so you need about 65 more to reach 750.
+
+**The new paragraph has one claim the appendix contradicts.** It says you told Claude about the Michigan Daily and asked for a newspaper look. Your redesign prompt (Prompt 4 in the transcript) was "use top tier frontend design skills… Should not look like every other vibe coded slop." It never mentions the Michigan Daily or a newspaper. The newspaper concept was Claude's choice, and its reply says so. A grader reading the appendix will see the mismatch. Two honest ways to write it:
+- You asked only for something that didn't look vibe coded, and Claude came up with the newspaper look itself, which matched what you had in mind. This is also a good example for "What LLMs Do Well."
+- If you described the Michigan Daily idea in a different chat, say that it happened there.
+
+**Where the last 65 words could go:**
+- "Where the LLM Fell Short" now opens with "The only thing is the frontend…", which reads oddly without the sentence before it. A short opening sentence of your own would fix that.
+- A concrete number from the build fits any section: about an hour from empty repo to deployable app, 7 prompts, or 34 of 62 coordinates more than 100 ft off.
+
+Send the last part and I'll do the final rebuild. Then merge the pull request before you submit.
+
+
+> *2026-11-16 19:25 UTC — automated notification (pull-request watch / scheduled check-in), not typed by the user.*
+
+- *Tool —* **ReadNotifications**: 
+- *Tool —* **github:pull_request_read**: method=get_check_runs, owner=blakelevine650-wq, repo=Vibe-Project, pullNumber=1
+```text
+{"total_count":2,"check_runs":[{"id":133551730665,"name":"deploy","status":"completed","conclusion":"skipped","html_url":"https://github.com/blakelevine650-wq/Vibe-Project/actions/runs/43939128913/job/133551730665","details_url":"https://github.com/blakelevine650-wq/Vibe-Project/actions/runs/43939128913/job/133551730665","started_at":"2026-11-16T19:25:24Z","completed_at":"2026-11-16T19:25:24Z"},{"id":133551593799,"name":"build","status":"completed","conclusion":"success","html_url":"https://github.com/blakelevine650-wq/Vibe-Project/actions/runs/43939128913/job/133551593799","details_url":"https://github.com/blakelevine650-wq/Vibe-Project/actions/runs/43939128913/job/133551593799","started_at":"2026-11-16T19:25:13Z","completed_at":"2026-11-16T19:25:24Z"}]}
+```
+
+**Claude:**
+
+The latest push, with your "What LLMs Do Well" paragraph, passed its checks on [blakelevine650-wq/Vibe-Project#1](https://github.com/blakelevine650-wq/Vibe-Project/pull/1). The build succeeded, and deploy was skipped as usual for a pull request. Part 1 is at about 685 words; send the last ~65 whenever they're ready.
+
+
+---
+
+## Prompt 18 — 2026-11-16 19:27 UTC
+
+**User:**
+
+I also wanted to highlight how this summer I used AI to build a working product alongside my friend called Prism, and it's at prismdata.co. And that was a really good experience. So having that background experience helped me sort of know my plan going into building this product and made me excited about this certain flex assignment, since the one I currently have live and is working, it allows for well, it looks pretty professionally done, as well as not as AI vibe coded slop that you see online and sometimes various companies' websites. So that's definitely so. So when building this product, I had a good plan to first start with the plan feature in Claude and then build out in phases rather than all at once, starting at phase one and into phase six. So really having a structured approach to this build out to create a working product and then continue to ideate and then iterate as I move forward along features, working alongside to guide it, and then having the LLM do the part I can, which is coding.
+
+- *Tool —* **Bash**: Add the paragraph, refresh the appendix, rebuild the PDF and push
+- *Tool —* **SendUserFile**: sent `Wolverine-Daily-Assignment.pdf` — “Part 1 is now in the 750–1,000 word range”

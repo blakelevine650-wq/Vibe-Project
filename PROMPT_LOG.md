@@ -485,3 +485,17 @@ _(Fill in.)_
 
 _(Fill in.)_
 
+---
+
+### Prompt 17
+
+> _[A paragraph about building Prism this summer and my phased, plan-first approach. Reproduced word for word in the appendix transcript.]_
+
+### What Claude did
+
+- Added it to "The Vibe Coding Journey", after my first paragraph there (which also mentions Prism), with spelling and grammar fixed. Read "the part I can, which is coding" as "the part I can't". Rebuilt the PDF; Part 1 is now within the 750–1,000 word range.
+
+### My notes
+
+_(Fill in.)_
+
