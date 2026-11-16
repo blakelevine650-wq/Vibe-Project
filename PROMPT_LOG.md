@@ -397,3 +397,18 @@ _(Fill in after writing the reflection.)_
 
 _(Fill in.)_
 
+---
+
+### Prompt 11
+
+> _[My own notes for Part 1: Original vision, Vibe coding journey, Where the LLM fell short, and sources. Reproduced word for word in the appendix transcript.]_
+
+### What Claude did
+
+- Put my notes into Part 1 with only spelling and grammar fixed, and rebuilt the PDF.
+- Pointed out what still costs points: the length (about 210 of 750 words), two missing sections, the claim that the LLM didn't fall short, two statements the appendix doesn't support, and GitHub/Twitter as sources.
+
+### My notes
+
+_(Fill in.)_
+

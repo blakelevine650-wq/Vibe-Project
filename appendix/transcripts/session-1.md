@@ -9,7 +9,7 @@ Session 1 of Wolverine Daily, Claude Code (cloud session), 14–16 November 2026
 - Local file paths are shortened to `<repo>` and `<scratchpad>`, and personal contact details are removed.
 - Models: the session was set to claude-opus-5-5 but ran on claude-fable-5-2 from the first prompt through Prompt 8; the user switched to claude-opus-5-5 before Prompt 9.
 
-10 user prompts in total.
+11 user prompts in total.
 
 ---
 
@@ -1797,3 +1797,79 @@ errors: []
 Figure 2 now shows the fixed search. Logging the prompt, refreshing the appendix, and rebuilding the document and PDF:
 
 - *Tool —* **Bash**: Log the prompt, refresh the transcript, rebuild the document and PDF, and run checks
+```text
+10 prompts; 106486 chars; 143 tool actions
+saved submission/Wolverine-Daily-Assignment.docx tables 2
+pages 44
+3 ['Figure 1.', 'Figure 2.']
+4 ['Figure 3.', 'Figure 4.']
+5 ['Figure 5.', 'Figure 6.']
+6 ['Figure 7.', 'Figure 8.']
+7 ['Figure 9.', 'Figure 10.']
+8 []
+has prompt 10: True
+1.9M	submission/Wolverine-Daily-Assignment.pdf
+no private email
+      Tests  31 passed (31)
+```
+
+- *Tool —* **Bash**: Commit and push the fix and the rebuilt PDF
+- *Tool —* **SendUserFile**: sent `Wolverine-Daily-Assignment.pdf` — “Single PDF: Part 2 screenshots and the full Part 3 appendix are in; Part 1 is waiting for your text”
+```text
+branch 'claude/serene-euler-9pzpky' set up to track 'origin/claude/serene-euler-9pzpky'.
+## claude/serene-euler-9pzpky...origin/claude/serene-euler-9pzpky
+```
+
+**Claude:**
+
+The search bug is fixed and the single PDF is rebuilt, but I left Part 1, the reflection itself, for you to write. The assignment says those 750–1,000 words can't be LLM output, and submitting mine would present it as your work. Both changes are pushed to the pull request.
+
+**The fix:** Campus Clue search now matches the start of words instead of letters anywhere in a name. Typing "di" finds only The Diag, where it used to list 28 places. "lib", "hall" and "quad" still find every library, hall and quad. I added a test for this, and all 31 tests pass.
+
+**The PDF** (`submission/Wolverine-Daily-Assignment.pdf`, 44 pages):
+- **Page 1:** title block, with your name and section still blank.
+- **Part 1:** the five section headings with nothing under them yet.
+- **References:** the three sources, in APA format.
+- **Part 2:** the live and repository links, then 10 captioned screenshots, re-taken on the fixed build. Figure 2 now shows "ha" listing Hatcher and the halls.
+- **Part 3:** the full transcript, now including your prompt about the bug.
+
+**To finish:** paste your reflection here, even as rough notes, and I'll put it into Part 1. I'll check it's 750–1,000 words and in the required format, then regenerate the PDF. You can also type it into `submission/Wolverine-Daily-Assignment.docx` yourself and save that as a PDF. `submission/reflection-outline.md` has the evidence and questions for each section.
+
+Merge the pull request before you submit; the live link in Part 2 doesn't work until you do. It's due at 11:59 pm tonight.
+
+
+> *2026-11-16 18:29 UTC — automated notification (pull-request watch / scheduled check-in), not typed by the user.*
+
+- *Tool —* **ReadNotifications**: 
+- *Tool —* **github:pull_request_read**: method=get_check_runs, owner=blakelevine650-wq, repo=Vibe-Project, pullNumber=1
+```text
+{"total_count":2,"check_runs":[{"id":133517204735,"name":"deploy","status":"completed","conclusion":"skipped","html_url":"https://github.com/blakelevine650-wq/Vibe-Project/actions/runs/43929135377/job/133517204735","details_url":"https://github.com/blakelevine650-wq/Vibe-Project/actions/runs/43929135377/job/133517204735","started_at":"2026-11-16T18:29:20Z","completed_at":"2026-11-16T18:29:19Z"},{"id":133516535369,"name":"build","status":"completed","conclusion":"success","html_url":"https://github.com/blakelevine650-wq/Vibe-Project/actions/runs/43929135377/job/133516535369","details_url":"https://github.com/blakelevine650-wq/Vibe-Project/actions/runs/43929135377/job/133516535369","started_at":"2026-11-16T18:28:17Z","completed_at":"2026-11-16T18:29:19Z"}]}
+```
+
+**Claude:**
+
+The search fix passed its checks on GitHub: the tests and build succeeded, and deploy was skipped as usual on a pull request. [blakelevine650-wq/Vibe-Project#1](https://github.com/blakelevine650-wq/Vibe-Project/pull/1) is ready to merge whenever you are, and merging is what makes the live link in Part 2 work.
+
+
+---
+
+## Prompt 11 — 2026-11-16 18:33 UTC
+
+**User:**
+
+Here
+
+Orgiinal vision: set out to build a daily game, brainstormed with claude, was inspired to do this becasue people like to play those short mini games like wordle, so I wanted to create something similar except themed for michigan students
+
+Vibe coding journey: using claude, they were offering free use of Fable 5.2 which is the most advanced model out there. I have vibe coded products before this summer, having a live product called prism so I had some prior experience. For me planning is super important, so I put claude on planning mode to create a good idea and phased approach to the buildout. Only once all is planned I then let it start. However, obviosuly goign to run into bugs but using explorer agents to test your prototype to see if everything is working correctly
+
+The LLM did not fall short in any aspect since I was using Fable 5.2, an elite model. The only thing is the frontend part as I sometimes find it hard to have it create an output that doesnt look as if it was vibe coded since claude vibe coding has a distinct output. I have found that using github skills or downloading peoples frontend skills can lead to a better output 
+
+I consulted with github and twitter for vibe coded I guess idk maybe find some articles
+
+**Claude:**
+
+Thanks. I've put your words into Part 1, fixing only spelling and grammar, and rebuilt the PDF. Before you submit, here is what in this draft will cost you points. Most of it is quick to fix.
+
+- *Tool —* **Bash**: Insert the user's Part 1 draft, refresh the appendix, rebuild the PDF, and push
+- *Tool —* **SendUserFile**: sent `Wolverine-Daily-Assignment.pdf` — “PDF with your Part 1 draft in it (about 210 words so far)”
